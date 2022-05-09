@@ -1,0 +1,469 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    #navigatie {
+        font-family: Hind, sans-serif;
+    }
+
+    .fontlarge {
+        font-size: 18px;
+    }
+
+    .button_winkeloverzicht {
+        background-color: #A6C9D4;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .button_winkeloverzicht a {
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht a:hover {
+        font-weight: bold;
+    }
+
+    .button_winkeloverzicht_2 {
+        background-color: #A6C9D4;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+
+    .button_winkeloverzicht_2:hover {
+        background-color: #bfc1c2;
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht_2 a {
+        color: #353839 !important;
+    }
+
+    .weekdag {
+        text-transform: uppercase;
+    }
+
+    .tijdstip {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+
+    .daywrapper {
+        text-align: center;
+    }
+
+    /*STRETCH CONTAINER OUT OF GRID*/
+    .full-width {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+    .textwrapper {
+        padding: 50px;
+        font-size: 18px;
+    }
+
+    @keyframes fadeAndScale {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        70% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_1 {
+        animation: fadeAndScale 2s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.2s;
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-2 {
+        animation: fadeAndScale 3s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-3 {
+        animation: fadeAndScale 4s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.4s;
+        transform-origin: center bottom;
+    }
+
+    @keyframes fadeAndScale2 {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_2 {
+        animation: fadeAndScale2 3s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+</style>
+
+<!--IMG TEXT FULL WIDTH-->
+<div class="col-sm-12 col-md-12">
+    <div class="row">
+        <section class="section-text full-width" style="background-color: #d9d9d9; margin-bottom: 35px;">
+            <div class="picture">
+                <img alt="herstellingen toestellen" class="img-responsive full-width"
+                     src="http://www.shoponsite.be/upload/files/2439/herstelbanner2.png">
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<section class="openingsuren_detail full-width fadeAndScale_effect_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <h3 style="text-align: center; text-transform: uppercase;">Openingsuren hersteldienst Paal-Beringen</h3>
+                <div class="col-sm-4 col-md-4 daywrapper">
+                    <p class="tijdstip">9<span style="font-weight:300;">u</span>00 - 12<span style="font-weight:300;">u</span>30</p>
+                    <p class="tijdstip">13<span style="font-weight:300;">u</span>00 - 17<span style="font-weight:300;">u</span>00</p>
+                    <p class="weekdag"> MA - DO </p>
+                </div>
+                <div class="col-sm-4 col-md-4 daywrapper">
+                    <p class="tijdstip">9<span style="font-weight:300;">u</span>00 - 12<span style="font-weight:300;">u</span>30</p>
+                    <p class="tijdstip">13<span style="font-weight:300;">u</span>00 - 16<span style="font-weight:300;">u</span>00</p>
+                    <p class="weekdag"> VR </p>
+                </div>
+                <div class="col-sm-4 col-md-4 daywrapper" >
+                    <p class="tijdstip">10<span style="font-weight:300;">u</span>00 - 16<span style="font-weight:300;">u</span>00</p>
+                    <p><br></p>
+                    <p class="weekdag"> ZA </p>
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-12 col-md-12 daywrapper">
+                <p><br></p>
+                <p class="weekdag" style="margin-bottom:30px;">Zondag gesloten</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="col-sm-12 col-md-12 fadeAndScale_effect_1" style="margin-bottom: 10px;">
+    <div class="row">
+        <h2 style="text-align:center;">Essec is een officiële Apple &amp; Samsung hersteldienst</h2>
+        <h4 style="margin-bottom:35px; text-align:center;">Officiële Apple & Samsung reparatiedienst, met behoud van
+            fabrieksgarantie.</h4>
+        <div class="col-sm-12 col-md-6">
+            <div class="textwrapper" style="text-align:right;">
+                <h4>Garantie</h4>
+                <p>
+                    Essec Telecom Center biedt op producten een garantie gedurende twee jaar, te rekenen vanaf de dag van
+                    aankoop.
+                    Deze garantie is enkel geldig binnen de lijnen die gegeven
+                    worden door de fabrikant, zoals bepaald is door de voorwaarden van de fabrikant zelf.
+                </p>
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <img alt="tevreden klant" src="http://www.shoponsite.be/upload/files/2439/happycustomer2.jpg">
+        </div>
+    </div>
+</div>
+
+<div class="col-sm-12 col-md-12 fadeAndScale_effect_1" style="margin-bottom: 25px;">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <img alt="herstelling" src="https://shoponsite.be/upload/files/2439/paal3.jpg">
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="textwrapper" style="text-align:left;">
+                <p>
+                    Volgende gebreken vallen niet onder garantie: <br> een gebrek ten gevolge van normaal gebruik,
+                    schade ten gevolge van regen, water of enig andere vloeistof, roest en oxidatie,
+                    schade ten gevolge van ongevallen of intentioneel aangebrachte schade (zichtbaar gebarsten
+                    scherm),
+                    nalatigheid, abnormale gebruiksomstandigheden, het niet opvolgen van
+                    instructies gegeven door de producenten, slecht gebruik, wijziging of herstelling van deze producten
+                    door een niet herkende hersteldienst.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="col-sm-12 col-md-12" style="margin-bottom: 25px;">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 fadeAndScale_effect_1-2">
+            <h2 style="text-align:center;">Samsung Service Center</h2>
+            <h4 style="text-align:center">Essec is een officiële Samsung hersteldienst</h4>
+            <div class="aanbod_hersteldienst" style="padding:10px 30px; text-align:left;">
+                <p style="display:flex; align-items: self-end;">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                    </svg>
+                    Altijd originele onderdelen
+                </p>
+                <p style="display:flex; align-items: self-end;">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                    </svg>
+                    Met behoud van garantie
+                </p>
+                <p style="display:flex; align-items: self-end;">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                    </svg>
+                    Drie maanden garantie op uitgevoerde reparatie
+                </p>
+                <p style="display:flex; align-items: self-end;">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                    </svg>
+                    <a href="callto:+32 11 45 04 60">Op afspraak, na telefonisch contact</a>
+                </p>
+                <p style="display:flex; align-items: self-end;">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                    </svg>
+                    <a href="mailto:repair@essec.be">Contacteer ons via mail</a>
+                </p>
+                <p style="display:flex; align-items: center;">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                    </svg>
+                    De gemiddelde reparatieduur bedraagt ongeveer 1 uur
+                </p>
+                <p style="display:flex; align-items: self-end;">
+                    <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                         viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                    </svg>
+                    Uw toestel wordt hersteld, terwijl u wacht
+                </p>
+                <div class="prijs_tool" style="text-align:center; margin: 70px 20px 20px 20px;">
+                    <p>
+                        <a href="http://telecompleetste.be/herstellingen/" target="_blank">Maak gebruik van onze handige
+                            tool om een idee te krijgen van de kostprijs voor de herstelling van uw Samsung toestel</a>
+                        <br>
+                    </p>
+                    <button class="btn btn-rounded button_winkeloverzicht"
+                            style="border:none; border-radius:10px; margin-top: 10px;"
+                            type="button">
+                        <a class="fontlarge"
+                           href="http://telecompleetste.be/herstellingen/" target="blank">Prijslijst</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6  fadeAndScale_effect_1-3" style="background-color:#E1EBEE;">
+            <div class="row">
+                <h2 style="text-align:center;">Apple Independent Repair Provider</h2>
+                <h4 style="text-align:center">Apple Authorised Reseller</h4>
+                <div class="aanbod_hersteldienst" style="padding:10px 30px; text-align:left;">
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        Herstelling van toestellen buiten garantie
+                    </p>
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        Altijd originele onderdelen
+                    </p>
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        Drie maanden garantie op uitgevoerde reparatie
+                    </p>
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        <a href="https://ilabo.be/">Essec is een officiële iLabo partner</a>
+                    </p>
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        <a href="callto:+32 11 45 04 60">Op afspraak, na telefonisch contact</a>
+                    </p>
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        <a href="mailto:repair@essec.be">Contacteer ons via mail</a>
+                    </p>
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        De gemiddelde reparatieduur bedraagt ongeveer 1 uur
+                    </p>
+                    <p style="display:flex; align-items: self-end;">
+                        <svg clip-rule="evenodd" fill-rule="evenodd" height="24" style="margin-right: 10px;"
+                             viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/>
+                        </svg>
+
+                        Uw toestel wordt hersteld, terwijl u wacht
+                    </p>
+                    <div class="prijs_tool" style="text-align:center; margin: 35px 20px 20px 20px;">
+                        <p>
+                            <a href="http://telecompleetste.be/herstellingen/" target="_blank">Maak gebruik van onze
+                                handige tool om een idee te
+                                krijgen van de kostprijs voor de herstelling van uw Apple toestel</a>
+                            <br>
+                        </p>
+                        <button class="btn btn-rounded button_winkeloverzicht_2"
+                                style="border:none; border-radius:10px; margin-top:10px;"
+                                type="button">
+                            <a class="fontlarge"
+                               href="https://telecompleetste.be/herstellingen/apple" target="blank">Prijslijst</a>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="col-sm-12 fadeAndScale_effect_1-3" style="margin-bottom: 25px;">
+    <div class="row">
+        <h3>Voorwaarden omtrent uw herstelling</h3>
+        <div style="align-items: baseline;">
+            <p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" style="margin-right: 10px;"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
+
+                Elk toestel dat aangemeld wordt voor herstelling moet vergezeld zijn van een geldig
+                <b>garantiedocument/aankoopbewijs</b>.
+                Mogen wij u vragen dit alvast klaar te houden?
+            </p>
+        </div>
+
+        <div style="align-items: baseline;">
+            <p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" style="margin-right: 10px;"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
+
+                Wij zijn niet verantwoordelijk voor uw gegevens.
+                Wij raden u daarom aan altijd een back-up te maken van uw toestel vooraleer u het binnenbrengt voor
+                herstelling.
+                Verwijder ook alle persoonlijke data en meld u af van sociale media.
+            </p>
+        </div>
+
+        <div style="align-items: baseline;">
+            <p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" style="margin-right: 10px;"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
+
+                Op batterijen en accessoires geldt een garantietermijn van 6 maanden.
+            </p>
+        </div>
+
+        <div style="align-items: baseline;">
+            <p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" style="margin-right: 10px;"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
+
+                Wanneer blijkt dat een herstelling niet onder de garantievoorwaarden valt (vb: water-, val-, druk- of
+                stootschade),
+                krijgt u een bestek opgemaakt met de volgende 3 mogelijkheden:
+            </p>
+            <ul>
+                <li style="list-style-type: square;">Kostprijs van de herstelling (indien mogelijk)</li>
+                <li style="list-style-type: square;">Toestel onhersteld terug (€50,-)</li>
+                <li style="list-style-type: square;">Milieuvriendelijk vernietigen (gratis)</li>
+            </ul>
+        </div>
+
+        <div style="align-items: baseline;">
+            <p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" style="margin-right: 10px;"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
+                Herstellingen die niet afgehaald zijn na 3 maanden na hersteldatum worden eigendom van ESSEC.
+            </p>
+        </div>
+
+        <div style="align-items: baseline;">
+            <p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" style="margin-right: 10px;"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
+                Essec hanteert dezelfde garantieperiode als door de desbetreffende leverancier van het product
+                aangeboden wordt.
+                Voor Apple-toestellen gelden de volgende garantietermijnen:
+                B2B (factuur) = 1 jaar garantie - Particulier = 2 jaar garantie
+            </p>
+        </div>
+
+        <div style="align-items: baseline;">
+            <p>
+                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" style="margin-right: 10px;"><path d="M24 4.685l-16.327 17.315-7.673-9.054.761-.648 6.95 8.203 15.561-16.501.728.685z"/></svg>
+                Alle handelingen van Essec buiten vermelde garantieperiode, (herstellingen, software-updates…) worden
+                uitgevoerd op vraag van en vallen onder de verantwoordelijkheid van de klant.
+
+            </p>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<!--STYLING-->
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    #navigatie {
+        font-family: Hind,sans-serif;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .fontsmall {
+        font-size: 14px;
+    }
+
+    .essecbutton {
+        background-color: #B0C4DE;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .essecbutton:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .essecbutton a {
+        color: #353839 !important;
+    }
+
+    .essecbutton a:hover {
+        font-weight: bold;
+    }
+
+    .button_winkeloverzicht {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .button_winkeloverzicht a {
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht a:hover {
+        font-weight: bold;
+    }
+
+    .essecshops {
+        margin-top: 40px;
+    }
+
+    .essecshops {
+        padding: 20px 0;
+    }
+
+    .caption_title {
+        font-family: 'Poppins', sans-serif;
+        color: #F5F5F5;
+        /*color: #2958A3;*/
+        font-size: 50px;
+    }
+
+    .caption_text {
+        font-family: 'Poppins', sans-serif;
+        color: #101010;
+        font-size: 50px;
+        padding-left: 40px;
+    }
+
+    .parking-icon-text {
+        padding-left: 40px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .carousel-inner {
+        overflow: visible;
+        width: 100%;
+    }
+
+    .fototeam {
+        margin: auto;
+        width: 100%;
+        border-radius: 20px 20px;
+    }
+
+    .carousel-caption {
+        width: 700px !important;
+        text-align: left;
+        text-shadow: none;
+        left: 60%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 10px 10px;
+        /*background-color: rgba(169, 188, 218, .3);*/
+    }
+
+    :root {
+        --grey: rgba(0,0,0, .4);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (min-width:  768px) {
+        .grid {
+            grid-template-columns: auto 30%;
+        }
+    }
+
+    .grid .image {
+        position: relative;
+    }
+
+    .grid .image-text {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background-color: var(--grey);
+        padding: 15px;
+        min-height: 250px;
+        transform: translateY(-50%);
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .sidecontainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .center {
+        background: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        min-height: 270px;
+        padding-left: 15px;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+    .carousel-caption > h3 {
+        color: #ddd;
+        font-size: 18px;
+        font-stretch: ultra-condensed;
+        font-weight: 700;
+        margin: 0 0 16px;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .carousel-caption > h3 {
+            font-size: 24px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .carousel-caption > h3 {
+            font-size: 30px;
+        }
+
+        .carousel-control-shop .glyphicon-chevron-left,
+        .carousel-control-shop .glyphicon-chevron-right,
+        .carousel-indicators {
+            position: absolute;
+            top: auto;
+            bottom: 10px;
+            margin: 0;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .carousel-caption > h3 {
+            font-size: 36px;
+        }
+    }
+
+    .carousel-caption > p {
+        color: #000;
+    }
+
+    .carousel-control-shop,
+    .carousel-control-shop:hover {
+        color: black;
+        filter: none;
+        opacity: 1;
+        text-shadow: none;
+        width: 30%;
+    }
+
+    .carousel-control-shop.left,
+    .carousel-control-shop.right {
+        background-image: none;
+    }
+
+    .carousel-control-shop .glyphicon-chevron-left,
+    .carousel-control-shop .glyphicon-chevron-right,
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+
+    .carousel-control-shop .glyphicon-chevron-left {
+        left: 10px;
+    }
+
+    .carousel-control-shop .glyphicon-chevron-right {
+        right: 10px;
+    }
+
+    @media (min-width: 768px) {
+        .carousel-control-shop .glyphicon-chevron-right {
+            right: auto;
+            left: -395px; /* = 10px + 4 x 40px - 70% x Container width 750px */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .carousel-control-shop .glyphicon-chevron-right {
+            left: -549px; /* = 10px + 4 x 40px - 70% x Container width 970px */
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .carousel-control-shop .glyphicon-chevron-right {
+            left: -689px; /* = 10px + 4 x 40px - 70% x Container width 1170px */
+        }
+    }
+
+    .carousel-control-shop:hover .glyphicon-chevron-left,
+    .carousel-control-shop:hover .glyphicon-chevron-right {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+
+    .carousel-indicators {
+        right: 50px; /* = left + width form .glyphicon-chevron-left */
+        width: auto;
+    }
+
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        color: black;
+        cursor: auto;
+        display: none;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: -1px;
+        text-align: center;
+        text-indent: 0;
+        white-space: nowrap;
+    }
+
+    .carousel-indicators li.active {
+        display: inline-block;
+    }
+
+
+    @keyframes fadeAndScale {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        70% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_1 {
+        animation: fadeAndScale 1s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.2s;
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-2 {
+        animation: fadeAndScale 2s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-3 {
+        animation: fadeAndScale 4s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.4s;
+        transform-origin: center bottom;
+    }
+
+    @keyframes fadeAndScale2 {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_2 {
+        animation: fadeAndScale2 3s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .image-widescreen {
+        border: 1px solid red;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 330px;
+        max-height: 330px;
+        overflow-y: hidden;
+    }
+
+    .image-widescreen img {
+        width: 100%;
+    }
+
+    .margin-top-image {
+        margin-top: 330px;
+    }
+
+    .essec::after,
+    .essec::before,
+    .row::after,
+    .row::before {
+        content: " ";
+        display: table;
+    }
+
+    .essec::after,
+    .row::after {
+        clear: both;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .section-text {
+        background: #fafafa;
+        overflow: hidden;
+    }
+
+    .section-text .picture {
+        width: 48%;
+        float: left;
+    }
+
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section-text .picture img {
+        height: 491px;
+    }
+
+    @media (min-width: 992px) {
+        .section-text .picture img {
+            object-fit: cover;
+        }
+
+        .essec {
+            width: 970px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .section-text .picture {
+            width: 100%;
+            overflow: auto;
+        }
+
+        .section-text .picture img {
+            height: auto;
+        }
+
+        .section-text .picture img {
+            height: auto;
+        }
+
+        .section-text .text-wrapper p br {
+            display: none;
+        }
+    }
+
+    .section-text .text-wrapper {
+        width: 50%;
+        float: right;
+        padding-left: 78px;
+    }
+
+    @media (max-width: 1200px) and (min-width: 992px) {
+        .section-text .text-wrapper {
+            padding-left: 30px;
+        }
+    }
+
+    @media (max-width: 992px) and (min-width: 768px) {
+        .section-text .text-wrapper {
+            width: 100%;
+            float: none;
+            clear: both;
+            padding: 40px 20px;
+        }
+
+        .section-text .text-wrapper p {
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-text .picture img {
+            margin: 0 auto;
+        }
+
+        .section-text .text-wrapper {
+            width: 100%;
+            padding: 35px 30px 60px 30px;
+            text-align: center;
+        }
+
+        .section-text .text-wrapper h2 {
+            text-align: center;
+            margin-bottom: 27px;
+        }
+
+        .section-text .text-wrapper p {
+            font-size: 15px;
+            text-align: left;
+            line-height: 25px;
+        }
+    }
+
+    .section-text .text-wrapper h2 {
+        margin-bottom: 35px;
+    }
+
+    .section-text .text-wrapper p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .section-text .text-wrapper .btn-primary {
+        font-size: 19px;
+        background-color: #3d5d6f;
+        border-color: #3d5d6f;
+        padding: 0.5rem 1rem;
+        width: 195px;
+    }
+
+    @media (min-width: 1200px) {
+        .essec {
+            width: 1180px;
+        }
+    }
+
+    .full-width {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+</style>
+
+
+<!--jumbotron-->
+<div class="jumbotron full-width" style="background-color:#f2f2f2;">
+    <div class="container">
+        <h1 class="display-3">Meet our teams!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a
+            jumbotron and three supporting pieces of content. Use it as a starting point to create something more
+            unique.</p>
+        <button class="btn btn-rounded essecbutton " style="border:none; border-radius:10px;" type="button">
+            <a class="fontlarge" href="#teams">Check onze teams</a>
+        </button>
+    </div>
+</div>
+
+
+
+<!--IMG TEXT FULL WIDTH-->
+<section class="section-text full-width" style="background-color: #d9d9d9;">
+    <div class="picture">
+        <img alt="" class="img-responsive" src="http://www.shoponsite.be/upload/files/2439/zegja3.png"
+             style="border-radius:0px 20px 20px 0px;">
+    </div>
+    <div class="container essec">
+        <div class="row">
+            <div class="text-wrapper">
+                <h2 class="mb-0">In het postcorona tijdperk
+                    <span class="font-weight-bold">kiest Essec </span>resoluut voor draadloos
+                </h2>
+                <p style="margin-top: 10px;">
+                    Deze gezondheidscrisis heeft duidelijk gemaakt dat werken vanop afstand niet meer weg te denken is
+                    in onze huidige manier van werken en communiceren.
+                    Om het even waar u zich bevindt, zorgt Essec ervoor dat u tot om het even welke applicatie of data
+                    toegang heeft. Met als belangrijkste schakel uw mobiel en persoonlijk toestel. Zo zal uw
+                    ICT-infrastructuur bijdragen aan de groei van uw onderneming.
+                    Wij streven ernaar om uw medewerkers efficiënt te laten samenwerken zonder draad en zonder zorgen.
+                    Want de toekomst is draadloos, samen met Essec.
+                </p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge"
+                       href="#" target="blank">Worry less. Wire less</a>
+                </button>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="com-sm-12">
+            <button class="btn btn-rounded essecbutton " style="border:none; border-radius:10px;" type="button">
+                <a class="fontlarge" href="#teams">Check onze teams</a>
+            </button>
+
+            <button class="btn btn-rounded button_winkeloverzicht"
+                    style="border:none; border-radius:10px;"
+                    type="button">
+                <a class="fontlarge"
+                   href="#" target="blank">Worry less. Wire less</a>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!--TEXT RIGHT IMAGE LEFT-->
+<div class="row" style="margin-bottom:30px;">
+    <div class="col-md-6 fadeAndScale_effect_1-2" style="background-color: #CDDBD8; -webkit-box-shadow: 5px 5px 15px 3px rgba(205,219,216,0.5); box-shadow: 5px 5px 15px 3px rgba(205,219,216,0.5);">
+        <div class="card-deck deck-active contact-block" style="display:inline-block; margin-bottom:50px; margin-left:50px; margin-top:50px; padding:15px;">
+            <div class="card">
+                <div class="card-body fontlarge" style="text-align: right;">
+                    <div class="adres-wrapper">
+                        <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 fadeAndScale_effect_1">
+        <div class="col-lg">
+            <img alt="Essec Telecom Center Paal" class="center-block img-responsive" src="http://www.shoponsite.be/upload/files/2439/paal.png" />
+        </div>
+    </div>
+</div>
+
+
+
+<!--IMG LEFT TEXT RIGHT-->
+<div class="row" style="margin-bottom:30px;">
+    <div class="col-md-6 fadeAndScale_effect_1">
+        <div class="col-lg">
+            <img alt="Essec Telecom Center Paal" class="center-block img-responsive" src="http://www.shoponsite.be/upload/files/2439/paal.png" />
+        </div>
+    </div>
+    <div class="col-md-6 fadeAndScale_effect_1-2" style="background-color: #CDDBD8; -webkit-box-shadow: 5px 5px 15px 3px rgba(205,219,216,0.5); box-shadow: 5px 5px 15px 3px rgba(205,219,216,0.5);">
+        <div class="card-deck deck-active contact-block" style="display:inline-block; margin-bottom:50px; margin-left:50px; margin-top:50px; padding:15px;">
+            <div class="card">
+                <div class="card-body fontlarge" style="text-align: right;">
+                    <div class="adres-wrapper">
+                        <p>
+                            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--MAP LOCATIES IMAGE-->
+<img src="http://www.shoponsite.be/upload/files/2439/workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="www.google.com">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="www.hln.be">
+    <area shape="circle" coords="337,300,44" alt="Coffee" href="www.twitter.com">
+</map>
+
+
+
+
+<!--VOORSTELLING SHOPS-->
+<!--&lt;!&ndash;SHOP TEAM IMAGE&ndash;&gt;-->
+<!--<div class="container">-->
+<!--    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light" style="overflow:hidden;">-->
+<!--        <div class="col-md-5 p-lg-5 mx-auto my-5">-->
+<!--            <h1 class="display-4 font-weight-normal">Een headline</h1>-->
+<!--            <p class="lead font-weight-normal">jqiefj qijfe  qjeif jiqef ijqef qefij </p>-->
+<!--            <a href="" class="btn btn-outline-secondary">button text</a>-->
+<!--        </div>-->
+<!--        <div class="product-device box-shadow d-none d-md-block" style="box-shadow: 0 0.25rem 0.75rem rgb(0, 0, 0, 75%);">-->
+
+<!--        </div>-->
+<!--        <div class="product-device product-device-2 box-shadow d-none d-md-block">-->
+
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">-->
+<!--        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" style="overflow: hidden;">-->
+<!--            <div class="my-3 py-3">-->
+<!--                <h2 class="display-5">Headline</h2>-->
+<!--                <p class="lead">subheading</p>-->
+<!--            </div>-->
+<!--            <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">-->
+
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden" style="overflow: hidden;">-->
+<!--            <div class="my-3 p-3">-->
+<!--                <h2 class="display-5">Another headline</h2>-->
+<!--                <p class="lead">Another subheading</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">-->
+
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+</body>
+</html>

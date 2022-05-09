@@ -1,0 +1,680 @@
+<style>
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    #navigatie {
+        font-family: Hind, sans-serif;
+    }
+
+    .fontlarge {
+        font-size: 18px;
+    }
+
+    .button_winkeldetail {
+        background-color: #B0C4DE;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .button_winkeldetail:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeldetail a {
+        color: #353839 !important;
+    }
+
+    .button_winkeldetail a:hover {
+        font-weight: bold;
+    }
+
+    .iconwrapper {
+        text-align: center;
+    }
+
+    .full-wwidthhh {
+        left: 50%;
+        margin-left: -40vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+    @keyframes fadeAndScale {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        70% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_1 {
+        animation: fadeAndScale 1s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.2s;
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-2 {
+        animation: fadeAndScale 2s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-3 {
+        animation: fadeAndScale 4s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.4s;
+        transform-origin: center bottom;
+    }
+
+    @keyframes fadeAndScale2 {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_2 {
+        animation: fadeAndScale2 3s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .logowrapper {
+        display: none;
+    }
+
+    .logowrapper img {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        .margin-top {
+            margin-top: 65px;
+        }
+
+        .adres-wrapper {
+            padding-top: 60px;
+        }
+
+        .logo-wrapper {
+            padding-top: 35px;
+            padding-bottom: 40px;
+        }
+
+        /*.custom-content img {*/
+        /*    height: 100% !important;*/
+        /*}*/
+
+        .logowrapper {
+            margin-top: 50px;
+            display: block;
+        }
+
+        /*.full-width {*/
+        /*    margin-left: -40vw;*/
+        /*}*/
+    }
+
+
+    /*IMAGE DISPLAY*/
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto !important;
+    }
+
+    .gallery {
+        padding: 0 0 4rem 0;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 500px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .img-container:hover .img-content-hover {
+        display: block;
+    }
+
+    .imagerow {
+        margin-bottom: 25px;
+    }
+
+    .img_shops {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .img_shops:hover {
+        transform: scale(1.05);
+    }
+
+    .img-content-hover {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        display: none;
+        padding: 1rem;
+        background: #FFF;
+        font-weight: 400;
+        margin-top: 1.25rem;
+        margin-left: -2rem;
+    }
+
+    .title {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .category {
+        font-size: 1rem;
+    }
+
+    .img-content {
+        display: none;
+    }
+
+    .custom-content img {
+        height: inherit !important;
+    }
+
+
+
+
+    @supports (display: grid) {
+        .gallery .grid {
+            grid-gap: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .img_shops:hover {
+            transform: none;
+        }
+
+        .img-container {
+            height: 100%;
+        }
+
+        img-container:hover .img-content-hover {
+            display: none;
+        }
+
+
+        .img-content {
+            display: block;
+            padding: 1rem 0;
+        }
+
+        .img-container-wrapper {
+            height: 100%;
+        }
+    }
+
+
+    @media screen and (min-width: 991px) and (max-width: 1024px) {
+        .custom-content img {
+            height: initial !important;
+        }
+    }
+
+    /* BANNER AANBOD */
+    .bannercontent_p {
+        margin: 0 0 5px;
+    }
+
+    .bannercontent {
+        padding: 20px 0px 0px 30px;
+    }
+
+    .applebanner {
+        margin-bottom: 30px;
+    }
+
+
+
+
+</style>
+
+
+<!--TEST-->
+
+<section class="gallery">
+    <div class="container">
+        <h3>Neem een kijkje in onze winkel</h3>
+        <div class="grid">
+            <div class="row imagerow">
+                <!--3 kleine images-->
+                <div class="column-xs-12 column-md-4 col-sm-4">
+                    <figure class="img-container">
+                        <img class="img_shops" src="https://source.unsplash.com/8b1cWDyvT7Y">
+                        <figcaption class="img-content">
+                            <h2 class="title">Smart Watch</h2>
+                            <h3 class="category">Showcase</h3>
+                        </figcaption>
+                        <span class="img-content-hover">
+            <h2 class="title">Smart Watch</h2>
+            <h3 class="category">Showcase</h3>
+          </span>
+                    </figure>
+                </div>
+                <div class="column-xs-12 column-md-4 col-sm-4">
+                    <figure class="img-container">
+                        <img class="img_shops" src="https://source.unsplash.com/5VXH4RG88gc"/>
+                        <figcaption class="img-content">
+                            <h2 class="title">Camera Film</h2>
+                            <h3 class="category">Showcase</h3>
+                        </figcaption>
+                        <span class="img-content-hover">
+            <h2 class="title">Camera Film</h2>
+            <h3 class="category">Showcase</h3>
+          </span>
+                    </figure>
+                </div>
+                <div class="column-xs-12 column-md-4 col-sm-4">
+                    <figure class="img-container">
+                        <img class="img_shops" src="https://source.unsplash.com/XtUd5SiX464">
+                        <figcaption class="img-content">
+                            <h2 class="title">Coffee</h2>
+                            <h3 class="category">Showcase</h3>
+                        </figcaption>
+                        <span class="img-content-hover">
+            <h2 class="title">Coffee</h2>
+            <h3 class="category">Showcase</h3>
+          </span>
+                    </figure>
+                </div>
+            </div>
+
+
+            <!-- 2 rechtstaande images-->
+            <div class="row imagerow">
+                <div class="column-xs-12 column-md-6 col-sm-6">
+                    <figure class="img-container">
+                        <img class="img_shops" src="https://source.unsplash.com/JYGnB9gTCls"/>
+                        <figcaption class="img-content">
+                            <h2 class="title">Phone</h2>
+                            <h3 class="category">Showcase</h3>
+                        </figcaption>
+                        <span class="img-content-hover">
+            <h2 class="title">Phone</h2>
+            <h3 class="category">Showcase</h3>
+          </span>
+                    </figure>
+                </div>
+                <div class="column-xs-12 column-md-6 col-sm-6">
+                    <figure class="img-container">
+                        <img class="img_shops" src="https://source.unsplash.com/-RBuQ2PK_L8"/>
+                        <figcaption class="img-content">
+                            <h2 class="title">Keyboard</h2>
+                            <h3 class="category">Showcase</h3>
+                        </figcaption>
+                        <span class="img-content-hover">
+            <h2 class="title">Keyboard</h2>
+            <h3 class="category">Showcase</h3>
+          </span>
+                    </figure>
+                </div>
+            </div>
+
+
+            <!-- 1 breed gespreide image-->
+            <div class="row imagerow">
+                <div class="column-xs-12 col-md-12 col-sm-12">
+                    <figure class="img-container">
+                        <img class="img_shops" src="https://source.unsplash.com/P44RIGl9V54"/>
+                        <figcaption class="img-content">
+                            <h2 class="title">Wrist Watch</h2>
+                            <h3 class="category">Showcase</h3>
+                        </figcaption>
+                        <span class="img-content-hover">
+            <h2 class="title">Wrist Watch</h2>
+            <h3 class="category">Showcase</h3>
+          </span>
+                    </figure>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Background image -->
+<div class="container applebanner">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="bg-image" style="background-image: url('http://www.shoponsite.be/upload/files/2439/applebanner.jpg'); height: 394px; background-size: cover;">
+                <div class="container bannercontent">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                            <h3>U kan bij ons terecht voor:</h3>
+                            <p class="bannercontent_p">Officiële Proximus partner</p>
+                            <p class="bannercontent_p">Mobiele telefonie</p>
+                            <p class="bannercontent_p">Vaste telefonie</p>
+                            <p class="bannercontent_p">Internet & televisie</p>
+                            <p class="bannercontent_p">tablets</p>
+                            <p class="bannercontent_p">Radiocommunicatie</p>
+                            <p class="bannercontent_p">Samsung herstelservice</p>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 logowrapper">
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/applereseller.png" alt="Apple authorised reseller">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/oppo.png" alt="Oppo">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/xiaomi.png" alt="Xiaomi">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/Samsung_Orig_Wordmark_BLACK_RGB.png" alt="Samsung">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/proximuslogo.png" alt="Proximus">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- Background image -->
+<div class="container applebanner">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="bg-image" style="background-image: url('http://www.shoponsite.be/upload/files/2439/tabletbanner.png'); height: 394px; background-size: cover;">
+                <div class="container bannercontent">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                            <h3>U kan bij ons terecht voor:</h3>
+                            <p class="bannercontent_p">Officiële Proximus partner</p>
+                            <p class="bannercontent_p">Mobiele telefonie</p>
+                            <p class="bannercontent_p">Vaste telefonie</p>
+                            <p class="bannercontent_p">Internet & televisie</p>
+                            <p class="bannercontent_p">tablets</p>
+                            <p class="bannercontent_p">Radiocommunicatie</p>
+                            <p class="bannercontent_p">Samsung herstelservice</p>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 logowrapper">
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/applereseller.png" alt="Apple authorised reseller">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/oppo.png" alt="Oppo">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/xiaomi.png" alt="Xiaomi">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/Samsung_Orig_Wordmark_BLACK_RGB.png" alt="Samsung">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/proximuslogo.png" alt="Proximus">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Background image -->
+<div class="container applebanner">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="bg-image" style="background-image: url('http://www.shoponsite.be/upload/files/2439/silveriphonebanner.jpg'); height: 394px; background-size: cover;">
+                <div class="container bannercontent">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                            <h3>U kan bij ons terecht voor:</h3>
+                            <p class="bannercontent_p">Officiële Proximus partner</p>
+                            <p class="bannercontent_p">Mobiele telefonie</p>
+                            <p class="bannercontent_p">Vaste telefonie</p>
+                            <p class="bannercontent_p">Internet & televisie</p>
+                            <p class="bannercontent_p">tablets</p>
+                            <p class="bannercontent_p">Radiocommunicatie</p>
+                            <p class="bannercontent_p">Samsung herstelservice</p>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 logowrapper">
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/applereseller.png" alt="Apple authorised reseller">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/oppo.png" alt="Oppo">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/xiaomi.png" alt="Xiaomi">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/Samsung_Orig_Wordmark_BLACK_RGB.png" alt="Samsung">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/proximuslogo.png" alt="Proximus">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Background image -->
+
+<!--TEST-->
+
+<!--<div class="container-fluid">-->
+<!--    <div class="row" style="margin-bottom:30px;">-->
+<!--        <div class="col-md-8 fadeAndScale_effect_1">-->
+<!--            <div class="col-lg">-->
+<!--                <img alt="Essec Telecom Center Paal" class="center-block img-responsive full-width" src="http://www.shoponsite.be/upload/files/2439/paal.png" />-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-4 fadeAndScale_effect_1-2" style="background-color: #CDDBD8; -webkit-box-shadow: 5px 5px 15px 3px rgba(205,219,216,0.5); box-shadow: 5px 5px 15px 3px rgba(205,219,216,0.5);">-->
+<!--            <div class="card-deck deck-active contact-block" style="display:inline-block; margin-bottom:50px; margin-left:50px; margin-top:50px">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body fontlarge" style="text-align: right;">-->
+<!--                        <div class="adres-wrapper">-->
+<!--                            <p >-->
+<!--                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c3.196 0 6 2.618 6 5.602 0 3.093-2.493 7.132-6 12.661-3.507-5.529-6-9.568-6-12.661 0-2.984 2.804-5.602 6-5.602m0-2c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg>-->
+<!--                                <a href="https://g.page/EssecPaal?share" target="blank">Schoebroekstraat 48</a>-->
+<!--                            </p>-->
+<!--                            <p><a href="https://g.page/EssecPaal?share" target="blank">3583 Paal-Beringen</a></p>-->
+
+<!--                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376"/></svg>-->
+<!--                            <a href="tel:003211450460" style="text-underline:none;">-->
+<!--                                Tel +32 11 45 04 60-->
+<!--                            </a>-->
+
+<!--                            <p>-->
+<!--                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376"/></svg>-->
+<!--                                Fax +32 11 45 04 61-->
+<!--                            </p>-->
+
+<!--                            <p>-->
+<!--                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 3l-3.195 11.716-4.329-3.855 4.154-4.385-5.568 3.849-3.843-.934 12.781-6.391zm-7.988 8.876v4.124l1.735-2.578-1.735-1.546zm-4.136 5.684c-.646.405-1.312.765-1.986 1.069l.492 1.184c.675-.303 1.343-.658 1.992-1.056l-.498-1.197zm3.124-2.408c-.59.581-1.363 1.171-2.042 1.67l.505 1.214c.486-.346 1.087-.758 1.537-1.146v-1.738zm-5.808 5.137c-1.294.457-2.52.711-3.643.711-3.069 0-5.549-1.787-5.549-4.83 0-1.348.457-2.511 1.326-3.392 1-1 2.315-1.489 4.001-1.489 2.533 0 4.338 1.631 4.338 3.903 0 1.022-.369 1.957-1.033 2.62-.564.565-1.305.892-2.032.892-.425 0-.772-.163-.936-.424-.054-.087-.065-.142-.098-.337-.413.478-.848.685-1.457.685-1.076 0-1.761-.804-1.761-2.044 0-1.837 1.206-3.359 2.652-3.359.609 0 .913.152 1.207.609l.108-.38h1.285c-.065.217-.261.88-.315 1.12-.706 2.612-.695 2.504-.695 2.74 0 .447.616.27.967-.011.533-.413.881-1.218.881-2.055 0-1-.468-1.87-1.25-2.359-.489-.293-1.175-.457-1.946-.457-2.294 0-3.903 1.522-3.903 3.675 0 3.446 3.626 4.262 7.361 2.996l.492 1.186zm-3.397-5.282c0-.446-.25-.75-.631-.75-.413 0-.794.271-1.065.783-.261.489-.435 1.13-.435 1.631 0 .576.217.88.631.88.401 0 .782-.315 1.064-.87.262-.511.436-1.174.436-1.674z"/></svg>-->
+<!--                                <a HREF="mailto:paal@essec.be">e-mail</a>-->
+<!--                            </p>-->
+
+<!--                            <button type="button" class="btn btn-rounded button_winkeldetail " style="border:none; border-radius:10px;">-->
+<!--                                <a href="https://shops.niwzi.be/essec-telecom-center/nl/contact" target="blank" class="fontlarge">Contactformulier</a>-->
+<!--                            </button>-->
+<!--                            <p></p>-->
+<!--                        </div>-->
+<!--                        <div class="logo-wrapper">-->
+<!--                            <div class="col-md">-->
+<!--                                <p>-->
+<!--                                    <img alt="Essec Proximus" class="center-block img-responsive" src="http://www.shoponsite.be/upload/files/2439/proximus.png" />-->
+<!--                                </p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<p></p>-->
+<!--<div class="container fadeAndScale_effect_2">-->
+<!--    <div class="row">-->
+<!--        &lt;!&ndash;AANBOD&ndash;&gt;-->
+<!--        <div class="col-sm-4 aanbod" style="text-align:left">-->
+<!--            <div class="iconwrapper">-->
+<!--                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12 0c-3.371 2.866-5.484 3-9 3v11.535c0 4.603 3.203 5.804 9 9.465 5.797-3.661 9-4.862 9-9.465v-11.535c-3.516 0-5.629-.134-9-3zm0 1.292c2.942 2.31 5.12 2.655 8 2.701v10.542c0 3.891-2.638 4.943-8 8.284-5.375-3.35-8-4.414-8-8.284v-10.542c2.88-.046 5.058-.391 8-2.701zm5 7.739l-5.992 6.623-3.672-3.931.701-.683 3.008 3.184 5.227-5.878.728.685z"/></svg>-->
+<!--            </div>-->
+<!--            <h3>Ons aanbod</h3>-->
+<!--            <ul>-->
+<!--                <li>Officiële Proximus partner</li>-->
+<!--                <li>Clearplex</li>-->
+<!--                <li>Mobiele telefonie</li>-->
+<!--                <li>Vaste telefonie</li>-->
+<!--                <li>Internet & TV</li>-->
+<!--                <li>Tablets</li>-->
+<!--                <li>Navigatie</li>-->
+<!--                <li>Radiocommunicatie</li>-->
+<!--                <li>Track & Trace</li>-->
+<!--                <li>Samsung herstelpunt</li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;AFSPRAAK PROXIMUS&ndash;&gt;-->
+<!--        <div class="col-sm-4">-->
+<!--            <div class="afspraak" style="text-align:center">-->
+<!--                <div class="iconwrapper">-->
+<!--                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20 20h-4v-4h4v4zm-6-10h-4v4h4v-4zm6 0h-4v4h4v-4zm-12 6h-4v4h4v-4zm6 0h-4v4h4v-4zm-6-6h-4v4h4v-4zm16-8v22h-24v-22h3v1c0 1.103.897 2 2 2s2-.897 2-2v-1h10v1c0 1.103.897 2 2 2s2-.897 2-2v-1h3zm-2 6h-20v14h20v-14zm-2-7c0-.552-.447-1-1-1s-1 .448-1 1v2c0 .552.447 1 1 1s1-.448 1-1v-2zm-14 2c0 .552-.447 1-1 1s-1-.448-1-1v-2c0-.552.447-1 1-1s1 .448 1 1v2z"/></svg>-->
+<!--                </div>-->
+<!--                <h3 style="text-align:center;">Maakt u liever een afspraak in onze vestiging te Paal?</h3>-->
+<!--                <p>Hebt u een vraag over mobiele of vaste telefonie, internet & tv of iets anders en wenst u liever op afspraak geholpen te worden?</p>-->
+<!--                <div class="afspraak_button">-->
+<!--                    <button type="button" class="btn btn-rounded button_winkeldetail fontlarge" style="border:none; border-radius:10px;">-->
+<!--                        <a href="https://www.proximus.be/nl/id_f_cr_shop_contact/particulieren/r-orphans/forms/shop-appointment.html?shopId=9824" target="blank" class="fontlarge">Maak een afspraak</a>-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--                <br>-->
+<!--                <p>Of kom vrijblijvend langs tijdens onze openingsuren!</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;OPENINGSUREN&ndash;&gt;-->
+<!--        <div class="col-sm-4">-->
+<!--            <div class="detailpagina_openingsuren" style="text-align:center; padding-right:20px">-->
+<!--                <div class="iconwrapper">-->
+<!--                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.848 12.459c.202.038.202.333.001.372-1.907.361-6.045 1.111-6.547 1.111-.719 0-1.301-.582-1.301-1.301 0-.512.77-5.447 1.125-7.445.034-.192.312-.181.343.014l.985 6.238 5.394 1.011z"/></svg>-->
+<!--                </div>-->
+<!--                <h3>Openingsuren</h3>-->
+<!--                <p>Maandag: 09u00-12u30</p>-->
+<!--                <p>13u30-18u00</p>-->
+<!--                <p>Dinsdag: 09u00-12u30</p>-->
+<!--                <p>13u30-18u00</p>-->
+<!--                <p>Woensdag: 09u00-12u30</p>-->
+<!--                <p>13u30-18u00</p>-->
+<!--                <p>Donderdag: 09u00-12u30</p>-->
+<!--                <p>13u30-18u00</p>-->
+<!--                <p>Vrijdag: 09u00-12u30</p>-->
+<!--                <p>13u30-18u00</p>-->
+<!--                <p>Zaterdag: 10u00-16u00</p>-->
+<!--                <p>Zondag: Gesloten</p>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--</div>-->
+<!--<p></p>-->
+
+
+<!--MAPS + REVIEW-->
+<!--<div class="row fadeAndScale_effect_1-3" style="background-color: #CDDBD8">-->
+<!--    <div class="col-md-9">-->
+<!--        <style>-->
+<!--            #gmap&#45;&#45;iframe {-->
+<!--                width: 100%;-->
+<!--                min-height: 350px;-->
+<!--            }-->
+<!--        </style>-->
+
+<!--        <iframe id="gmap&#45;&#45;iframe" src="https://maps.google.com/maps?q=essec%20paal&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder=”0” style=”border:0” allowfullscreen></iframe>-->
+<!--    </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <div class="card-deck deck-active" style="padding: 20px">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body fontlarge margin-top" style="text-align: center;">-->
+<!--                        <p>Bent u tevreden over uw bezoek aan onze winkel?</p>-->
+<!--                        <p>Laat dan zeker een review achter op onze pagina! <a href="https://www.google.com/search?hl=nl-BE&gl=be&q=Proximus+Shop+Paal,+Schoebroekstraat+48,+3583+Beringen&ludocid=12313470319180405400&lsig=AB86z5W0N2nxlrtsUgsYQG3XcLLb#lrd=0x47c13b609cb7cfe1:0xaae23c0407105a98,3" target="blank" style="font-weight: bold;">Klik hier</a> om een review toe te voegen.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--</div>-->
+
+
+<script>
+    const imgContent = document.querySelectorAll('.img-content-hover');
+
+    function showImgContent(e) {
+        for (var i = 0; i < imgContent.length; i++) {
+            x = e.pageX;
+            y = e.pageY;
+            imgContent[i].style.transform = `translate3d(60px, 50px, 0)`;
+        }
+    }
+
+    document.addEventListener('mousemove', showImgContent);
+</script>
+

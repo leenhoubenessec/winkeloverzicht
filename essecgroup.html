@@ -1,0 +1,1289 @@
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f2f2f2;
+        overflow-x: hidden;
+    }
+
+    #navigatie {
+        font-family: Hind, sans-serif;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .fontsmall {
+        font-size: 14px;
+    }
+
+    .essecbutton {
+        background-color: #C96567;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .essecbutton:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .essecbutton a {
+        color: #353839 !important;
+    }
+
+    .essecbutton a:hover {
+        font-weight: bold;
+    }
+
+    .button_winkeloverzicht {
+        background-color: #f2f2f2;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .button_winkeloverzicht a {
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht a:hover {
+        font-weight: bold;
+    }
+
+    .essecshops {
+        margin-top: 40px;
+    }
+
+    .essecshops {
+        padding: 20px 0;
+    }
+
+    .caption_title {
+        font-family: 'Poppins', sans-serif;
+        color: #F5F5F5;
+        /*color: #2958A3;*/
+        font-size: 50px;
+    }
+
+    .caption_text {
+        font-family: 'Poppins', sans-serif;
+        color: #101010;
+        padding-left: 30px;
+    }
+
+    .parking-icon-text {
+        padding-left: 40px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .carousel-inner {
+        overflow: visible;
+        width: 100%;
+    }
+
+    .fototeam {
+        margin: auto;
+        width: 100%;
+        border-radius: 20px 20px;
+    }
+
+    .carousel-caption {
+        width: 700px !important;
+        text-align: left;
+        text-shadow: none;
+        left: 60%;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 10px 10px;
+        /*background-color: rgba(169, 188, 218, .3);*/
+    }
+
+    :root {
+        --grey: rgba(0, 0, 0, .4);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .caption_text {
+        font-size: 35px;
+    }
+
+    @media screen and (max-width: 812px) {
+        .grid {
+            grid-template-columns: auto 30%;
+        }
+
+        .grid .image-text {
+            border-radius: 20px 20px 20px 20px;
+            overflow: hidden;
+        }
+
+        .caption_text {
+            font-size:20px;
+            font-family: 'Poppins', sans-serif;
+            color: #101010;
+            padding-left: 30px;
+        }
+
+        .caption_title__maasmechelen {
+            font-size: 20px;
+        }
+    }
+
+    /*@media screen and  {*/
+    /*    .grid .image-text {*/
+    /*        border-radius: 20px 20px 20px 20px;*/
+    /*        overflow: hidden;*/
+    /*    }*/
+
+    /*    .caption_title__maasmechelen {*/
+    /*        font-size: 20px;*/
+    /*    }*/
+
+    /*    caption_text__genk,*/
+    /*    caption_text__pelt,*/
+    /*    caption_text__maasmechelen {*/
+    /*        font-size: 18px;*/
+    /*        font-family: 'Poppins', sans-serif;*/
+    /*        color: #101010;*/
+    /*        padding-left: 30px;*/
+    /*    }*/
+    /*}*/
+
+    @media screen and (max-width: 550px) {
+        /*.grid .image-text {*/
+        /*    border-radius: 20px 20px 20px 20px;*/
+        /*    overflow: hidden;*/
+        /*}*/
+
+        /*.caption_title__maasmechelen {*/
+        /*    font-size: 20px;*/
+        /*    color: red;*/
+        /*}*/
+    }
+
+    .grid .image {
+        position: relative;
+    }
+
+    .grid .image-text {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background-color: var(--grey);
+        padding: 15px;
+        min-height: 250px;
+        transform: translateY(-50%);
+        border-radius: 20px 0px 0px 20px;
+    }
+
+    .sidecontainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .center {
+        background: rgba(0, 0, 0, 0.2);
+        width: 100%;
+        min-height: 270px;
+        padding-left: 15px;
+        border-radius: 0px 20px 20px 0px;
+        position: relative;
+    }
+
+    .carousel-caption > h3 {
+        color: #ddd;
+        font-size: 18px;
+        font-stretch: ultra-condensed;
+        font-weight: 700;
+        margin: 0 0 16px;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        .carousel-caption > h3 {
+            font-size: 24px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .carousel-caption > h3 {
+            font-size: 30px;
+        }
+
+        .carousel-control-shop .glyphicon-chevron-left,
+        .carousel-control-shop .glyphicon-chevron-right,
+        .carousel-indicators {
+            position: absolute;
+            top: auto;
+            bottom: 10px;
+            margin: 0;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .carousel-caption > h3 {
+            font-size: 36px;
+        }
+    }
+
+    .carousel-caption > p {
+        color: #000;
+    }
+
+    .carousel-control-shop,
+    .carousel-control-shop:hover {
+        color: black;
+        filter: none;
+        opacity: 1;
+        text-shadow: none;
+        width: 30%;
+    }
+
+    .carousel-control-shop.left,
+    .carousel-control-shop.right {
+        background-image: none;
+    }
+
+    .carousel-control-shop .glyphicon-chevron-left,
+    .carousel-control-shop .glyphicon-chevron-right,
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+        font-size: 20px;
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+
+    .carousel-control-shop .glyphicon-chevron-left {
+        left: 10px;
+    }
+
+    .carousel-control-shop .glyphicon-chevron-right {
+        right: 10px;
+    }
+
+    @media (min-width: 768px) {
+        .carousel-control-shop .glyphicon-chevron-right {
+            right: auto;
+            left: -395px; /* = 10px + 4 x 40px - 70% x Container width 750px */
+        }
+    }
+
+    @media (min-width: 992px) {
+        .carousel-control-shop .glyphicon-chevron-right {
+            left: -549px; /* = 10px + 4 x 40px - 70% x Container width 970px */
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .carousel-control-shop .glyphicon-chevron-right {
+            left: -689px; /* = 10px + 4 x 40px - 70% x Container width 1170px */
+        }
+    }
+
+    .carousel-control-shop:hover .glyphicon-chevron-left,
+    .carousel-control-shop:hover .glyphicon-chevron-right {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+
+    .carousel-indicators {
+        right: 50px; /* = left + width form .glyphicon-chevron-left */
+        width: auto;
+    }
+
+    .carousel-indicators li,
+    .carousel-indicators li.active {
+        background-color: transparent;
+        border: 0;
+        border-radius: 0;
+        color: black;
+        cursor: auto;
+        display: none;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: -1px;
+        text-align: center;
+        text-indent: 0;
+        white-space: nowrap;
+    }
+
+    .carousel-indicators li.active {
+        display: inline-block;
+    }
+
+    .parking {
+        position: absolute;
+        top: 65%;
+        right: 0;
+    }
+
+
+    @keyframes fadeAndScale {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        70% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_1 {
+        animation: fadeAndScale 1s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.2s;
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-2 {
+        animation: fadeAndScale 2s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-3 {
+        animation: fadeAndScale 4s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.4s;
+        transform-origin: center bottom;
+    }
+
+    @keyframes fadeAndScale2 {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_2 {
+        animation: fadeAndScale2 3s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .image-widescreen {
+        border: 1px solid red;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 330px;
+        max-height: 330px;
+        overflow-y: hidden;
+    }
+
+    .image-widescreen img {
+        width: 100%;
+    }
+
+    .margin-top-image {
+        margin-top: 330px;
+    }
+
+    .essec::after,
+    .essec::before,
+    .row::after,
+    .row::before {
+        content: " ";
+        display: table;
+    }
+
+    .essec::after,
+    .row::after {
+        clear: both;
+    }
+
+    .row {
+        display: block;
+    }
+
+    .section-text {
+        background: #fafafa;
+        overflow: hidden;
+    }
+
+    .section-text .picture {
+        width: 48%;
+        float: left;
+    }
+
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section-text .picture img {
+        height: 491px;
+    }
+
+    @media (min-width: 992px) {
+        .section-text .picture img {
+            object-fit: cover;
+        }
+
+        .essec {
+            width: 970px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .section-text .picture {
+            width: 100%;
+            overflow: auto;
+        }
+
+        .section-text .picture img {
+            height: auto;
+        }
+
+        .section-text .picture img {
+            height: auto;
+        }
+
+        .section-text .text-wrapper p br {
+            display: none;
+        }
+    }
+
+    .section-text .text-wrapper {
+        width: 50%;
+        float: right;
+        padding-left: 78px;
+    }
+
+    @media (max-width: 1200px) and (min-width: 992px) {
+        .section-text .text-wrapper {
+            padding-left: 30px;
+        }
+    }
+
+    @media (max-width: 992px) and (min-width: 768px) {
+        .section-text .text-wrapper {
+            width: 100%;
+            float: none;
+            clear: both;
+            padding: 40px 20px;
+        }
+
+        .section-text .text-wrapper p {
+            font-size: 16px;
+            margin-bottom: 35px;
+        }
+
+        /*.caption_text {*/
+        /*    font-size: 30px;*/
+        /*}*/
+    }
+
+    @media (max-width: 768px) {
+        .section-text .picture img {
+            margin: 0 auto;
+        }
+
+        .section-text .text-wrapper {
+            width: 100%;
+            padding: 35px 30px 60px 30px;
+            text-align: center;
+        }
+
+        .section-text .text-wrapper h2 {
+            text-align: center;
+            margin-bottom: 27px;
+        }
+
+        .section-text .text-wrapper p {
+            font-size: 15px;
+            text-align: left;
+            line-height: 25px;
+        }
+
+
+    }
+
+    .section-text .text-wrapper h2 {
+        margin-bottom: 35px;
+    }
+
+    .section-text .text-wrapper p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .section-text .text-wrapper .btn-primary {
+        font-size: 19px;
+        background-color: #3d5d6f;
+        border-color: #3d5d6f;
+        padding: 0.5rem 1rem;
+        width: 195px;
+    }
+
+    @media (min-width: 1200px) {
+        .essec {
+            width: 1180px;
+        }
+    }
+
+    /*STRETCH CONTAINER OUT OF GRID*/
+    .full-width {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+
+
+</style>
+
+
+<!--jumbotron-->
+<div class="jumbotron full-width" style="background-color:#f2f2f2;">
+    <div class="container">
+        <h1 class="display-3">Meet our teams!</h1>
+        <p>Met 7 vestigingen vespreid over heel Limburg, vind je ongetwijfeld jouw match in één van onze shops! Bekijk op deze pagina onze teams per shop, klik verder op de foto om meer informatie over de specifieke shop te verkrijgen.</p>
+        <button class="btn btn-rounded essecbutton " style="border:none; border-radius:10px;" type="button">
+            <a class="fontlarge" href="#teams">Check onze teams</a>
+        </button>
+    </div>
+</div>
+
+<!--IMG TEXT FULL WIDTH-->
+<section class="section-text full-width" style="background-color: #d9d9d9;">
+    <div class="picture">
+        <img alt="" class="img-responsive" src="http://www.shoponsite.be/upload/files/2439/zegja3.png">
+    </div>
+    <div class="container essec">
+        <div class="row">
+            <div class="text-wrapper">
+                <h2 class="mb-0">In het postcorona tijdperk
+                    <span class="font-weight-bold">kiest Essec </span>resoluut voor draadloos
+                </h2>
+                <p style="margin-top: 10px;">
+                    Deze gezondheidscrisis heeft duidelijk gemaakt dat werken vanop afstand niet meer weg te denken is
+                    in onze huidige manier van werken en communiceren.
+                    Om het even waar u zich bevindt, zorgt Essec ervoor dat u tot om het even welke applicatie of data
+                    toegang heeft. Met als belangrijkste schakel uw mobiel en persoonlijk toestel. Zo zal uw
+                    ICT-infrastructuur bijdragen aan de groei van uw onderneming.
+                    Wij streven ernaar om uw medewerkers efficiënt te laten samenwerken zonder draad en zonder zorgen.
+                    Want de toekomst is draadloos, samen met Essec.
+                </p>
+<!--                <button class="btn btn-rounded essecbutton "-->
+<!--                        style="border:none; border-radius:10px;"-->
+<!--                        type="button">-->
+<!--                    <a class="fontlarge"-->
+<!--                       href="#" target="blank">Worry less. Wire less</a>-->
+<!--                </button>-->
+                <p><span class="highlighted-text">Worry less. Wire less</span></p>
+                <style>
+                    .highlighted-text {
+                        background-image: url('http://www.shoponsite.be/upload/files/2439/highlight2.png');
+                        background-position: 50% 50%;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 5px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--TEAM SLIDERS-->
+<style>
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    #navigatie {
+        font-family: Hind, sans-serif;
+    }
+
+    .fontlarge {
+        font-size: 18px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .carousel {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .slick-slide {
+        margin: 10px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+        border: 2px solid #fff;
+    }
+
+    .wrapper .slick-dots li button:before {
+        font-size: 20px;
+        color: white;
+    }
+
+    /*.locatie-titel {*/
+    /*    font-size: 12px;*/
+    /*    font-weight: 500;*/
+    /*}*/
+
+    .card-body {
+        font-size: 14px;
+        margin: 0 10px;
+        text-align: left;
+        background-color: #FFF;
+        padding: 22px 10px 10px;
+        border-radius: 0px 0px 7px 7px;
+    }
+
+    .card-body p {
+        color: #6e6e73;
+    }
+
+    .button_winkeloverzicht {
+        background-color: #DCDCDC;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .button_winkeloverzicht a {
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht a:hover {
+        font-weight: bold;
+    }
+
+    .image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    figure {
+        overflow: hidden;
+        margin: 0 10px;
+    }
+
+    .image #zoom-in img {
+        transform: scale(1);
+        transition: 0.3s ease-in-out;
+    }
+
+    .image #zoom-in:hover img {
+        transform: scale(1.3);
+    }
+
+    .heightwrapper {
+        display: flex;
+        height: 100% !important;
+        flex-direction: column;
+    }
+
+    .fototeam {
+        border-radius: 20px;
+    }
+
+    .image-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background-color: rgba(0,0,0,.2);
+        padding: 15px;
+        min-height: 270px;
+        min-width: 250px;
+        transform: translateY(-50%);
+        border-radius: 20px 0 0 20px;
+        text-align: left;
+    }
+
+    .sidecontainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .center {
+        background-color: rgba(0,0,0,.2);
+        width: 100%;
+        min-width: 310px;
+        min-height: 270px;
+        padding-left: 15px;
+        border-radius: 0 20px 20px 0;
+        position: relative;
+    }
+
+    .sidecontainer-markup {
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .caption_text {
+        font-size: 35px;
+        color: #101010;
+        padding-left: 30px;
+    }
+
+    .caption_title {
+        font-family: 'Poppins',sans-serif;
+        color: #000;
+        font-size: 50px;
+    }
+
+    .parking {
+        position: absolute;
+        top: 65%;
+        right: 0;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        padding: 15px;
+        flex-direction: row;
+    }
+
+    .flex--item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*// min */
+    @media screen and (max-width: 768px) {
+        .mobile {
+            flex-direction:column;
+        }
+    }
+
+    @media screen and (min-width: 1199px)  {
+
+        .desktop {
+            display: flex;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        .caption_title {
+            color: #f5f5f5;
+        }
+
+        .heightwrapper {
+            flex-direction: row;
+        }
+    }
+
+    /* // max */
+    @media screen and (max-width: 812px) {
+
+        .grid .image-text {
+            border-radius: 20px 20px 20px 20px;
+            overflow: hidden;
+        }
+
+        .caption_text {
+            font-size:20px;
+            font-family: 'Poppins', sans-serif;
+            color: #101010;
+            padding-left: 30px;
+        }
+
+        .caption_title__maasmechelen {
+            font-size: 20px !important;
+        }
+    }
+</style>
+<div class="container" id="teams">
+    <div class="row">
+        <div class="wrapper">
+            <h2>Essec Telecom Center</h2>
+            <div class="carousel">
+
+                <!--PAAL-->
+                <div class="col-sm-12 currentslick">
+                    <div class="grid heightwrapper">
+                        <a href="https://shops.niwzi.be/essec-telecom-center/nl/essec-telecom-center-paal-1636" target="blank">
+                            <div class="image">
+                                <img alt="Essec team Paal"
+                                     class="img-responsive fototeam"
+                                     src="https://shoponsite.be/upload/files/2439/paal12.jpg">
+                                <div class="image-text desktop" style="min-height:270px;">
+                                    <h3 class="caption_title"><span style="font-size:34px;">Essec team</span> <br>
+                                        Paal</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <div class="sidecontainer desktop">
+                            <div class="center">
+                                <div class="sidecontainer-markup">
+                                    <svg height="45" style="margin-top:10px;" viewBox="0 0 24 24" width="45"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                    <p class="caption_text caption_text__paal">Ruim gamma</p>
+                                </div>
+
+                                <div class="sidecontainer-markup parking"
+                                     style="text-align: right; padding-right:20px;">
+                                    <svg height="24" viewBox="0 0 24 24" width="24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    </svg>
+                                    <p class="fontsmall" >Ruime parkeergelegenheid</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile mobile--markup container--wrapper">
+                            <div class="left--container flex--item">
+                                <h3 class="caption_title" style="margin: 0;">
+                                    <span style="font-size:34px;">Essec team</span>
+                                    Paal
+                                </h3>
+                            </div>
+                            <div class="middle--container flex--item">
+                                <svg height="24" viewBox="0 0 24 24" width="24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                </svg>
+                                <p class="fontsmall" style="padding:10px;">Ruime parkeergelegenheid</p>
+                            </div>
+                            <div class="right--container flex--item">
+                                <p>Ruim gamma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--HASSELT-->
+                <div class="col-sm-12 currentslick">
+                    <div class="grid heightwrapper">
+                        <a href="https://shops.niwzi.be/essec-telecom-center/nl/essec-telecom-center-hasselt-1647" target="blank">
+                            <div class="image">
+                                <img alt="Essec team Hasselt"
+                                     class="img-responsive fototeam"
+                                     src="http://www.shoponsite.be/upload/files/2439/hasselt5.jpg">
+
+                                <div class="image-text desktop" style="min-height:270px;">
+                                    <h3 class="caption_title"><span style="font-size:34px;">Essec team</span> <br>
+                                        Hasselt</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="sidecontainer desktop">
+                            <div class="center">
+                                <div class="sidecontainer-markup">
+                                    <svg height="45" style="margin-top:10px;" viewBox="0 0 24 24" width="45"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                    <p class="caption_text caption_text__paal">Tijdloze service</p>
+                                </div>
+
+                                <div class="sidecontainer-markup parking"
+                                     style="text-align: right; padding-right:20px;">
+                                    <svg height="24" viewBox="0 0 24 24" width="24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    </svg>
+                                    <p class="fontsmall">Ruime parkeergelegenheid</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile mobile--markup container--wrapper">
+                            <div class="left--container flex--item">
+                                <h3 class="caption_title" style="margin: 0;">
+                                    <span style="font-size:34px;">Essec team</span>
+                                    Hasselt
+                                </h3>
+                            </div>
+                            <div class="middle--container flex--item">
+                                <svg height="24" viewBox="0 0 24 24" width="24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                </svg>
+                                <p class="fontsmall" style="padding:10px;">Ruime parkeergelegenheid</p>
+                            </div>
+                            <div class="right--container flex--item">
+                                <p>Tijdloze service</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--GENK-->
+                <div class="col-sm-12 currentslick">
+                    <div class="grid heightwrapper">
+                        <a href="https://shops.niwzi.be/essec-telecom-center/nl/essec-telecom-center-genk-1645" target="blank">
+                            <div class="image">
+                                <img alt="Essec team Genk"
+                                     class="img-responsive fototeam"
+                                     src="http://www.shoponsite.be/upload/files/2439/genk6.jpg">
+
+                                <div class="image-text desktop" style="min-height:270px;">
+                                    <h3 class="caption_title caption_title__genk"><span
+                                            style="font-size:34px;">Essec team</span>
+                                        <br> Genk</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="sidecontainer desktop">
+                            <div class="center">
+                                <div class="sidecontainer-markup">
+                                    <svg height="45" style="margin-top:10px;" viewBox="0 0 24 24" width="45"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                    <p class="caption_text caption_text__genk">Diepgaande service</p>
+                                </div>
+                                <div class="sidecontainer-markup parking"
+                                     style="text-align: right; padding-right:20px;">
+                                    <svg height="24" viewBox="0 0 24 24" width="24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    </svg>
+                                    <p class="fontsmall">Ruime parkeergelegenheid</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile mobile--markup container--wrapper">
+                            <div class="left--container flex--item">
+                                <h3 class="caption_title" style="margin: 0;">
+                                    <span style="font-size:34px;">Essec team</span>
+                                    Genk
+                                </h3>
+                            </div>
+                            <div class="middle--container flex--item">
+                                <svg height="24" viewBox="0 0 24 24" width="24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                </svg>
+                                <p class="fontsmall" style="padding:10px;">Ruime parkeergelegenheid</p>
+                            </div>
+                            <div class="right--container flex--item">
+                                <p>Diepgaande service</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--PELT-->
+                <div class="col-sm-12 currentslick">
+                    <div class="grid heightwrapper">
+                        <a href="https://shops.niwzi.be/essec-telecom-center/nl/essec-telecom-center-pelt-1648" target="blank">
+                            <div class="image">
+                                <img alt="Essec team Pelt"
+                                     class="img-responsive fototeam"
+                                     src="https://shoponsite.be/upload/files/2439/pelt4.jpg">
+
+                                <div class="image-text desktop" style="min-height:270px;">
+                                    <h3 class="caption_title caption_title__pelt"><span
+                                            style="font-size:34px;">Essec team</span>
+                                        <br>Pelt</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="sidecontainer desktop">
+                            <div class="center">
+                                <div class="sidecontainer-markup">
+                                    <svg height="45" style="margin-top:10px;" viewBox="0 0 24 24" width="45"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                    <p class="caption_text caption_text__pelt" style="font-size:25px;">Technologie in het daglicht</p>
+                                </div>
+                                <div class="sidecontainer-markup parking"
+                                     style="text-align: right; padding-right:20px;">
+                                    <svg height="24" viewBox="0 0 24 24" width="24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    </svg>
+                                    <p class="fontsmall" >Ruime parkeergelegenheid</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile mobile--markup container--wrapper">
+                            <div class="left--container flex--item">
+                                <h3 class="caption_title" style="margin: 0;">
+                                    <span style="font-size:34px;">Essec team</span>
+                                    Pelt
+                                </h3>
+                            </div>
+                            <div class="middle--container flex--item">
+                                <svg height="24" viewBox="0 0 24 24" width="24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                </svg>
+                                <p class="fontsmall" style="padding:10px;">Ruime parkeergelegenheid</p>
+                            </div>
+                            <div class="right--container flex--item">
+                                <p>Technologie in het daglicht</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--HEUSDEN-ZOLDER-->
+                <div class="col-sm-12 currentslick">
+                    <div class="grid heightwrapper">
+                        <a href="https://shops.niwzi.be/essec-telecom-center/nl/essec-telecom-center-heusden-zolder-1651" target="blank">
+                            <div class="image">
+                                <img alt="Essec team Heusden-zolder" class="img-responsive fototeam"
+                                     src="https://shoponsite.be/upload/files/2439/heusden-zolder6.jpg">
+                                <div class="image-text desktop" style="min-height:270px;">
+                                    <h3 class="caption_title"><span style="font-size:30px;">Essec team</span>
+                                        <br><p class="caption_title__maasmechelen" style="font-size:20px;">Heusden-Zolder</p>
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="sidecontainer desktop">
+                            <div class="center">
+                                <div class="sidecontainer-markup">
+                                    <svg height="45" style="margin-top:10px;" viewBox="0 0 24 24" width="45"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                    <p class="caption_text caption_text__maasmechelen">Winkel met een glimlach</p>
+                                </div>
+
+                                <div class="sidecontainer-markup parking"
+                                     style="text-align: right; padding-right:20px;">
+                                    <svg height="24" viewBox="0 0 24 24" width="24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    </svg>
+                                    <p class="fontsmall">Ruime parkeergelegenheid</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="mobile mobile--markup container--wrapper">
+                            <div class="left--container flex--item">
+                                <h3 class="caption_title" style="margin: 0;">
+                                    <span style="font-size:34px;">Essec team</span>
+                                    <span style="font-size:30px; letter-spacing:-2px;">Heusden-Zolder</span>
+                                </h3>
+                            </div>
+                            <div class="middle--container flex--item">
+                                <svg height="24" viewBox="0 0 24 24" width="24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                </svg>
+                                <p class="fontsmall" style="padding:10px;">Ruime parkeergelegenheid</p>
+                            </div>
+                            <div class="right--container flex--item">
+                                <p>Winkel met een glimlach</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- BREE-->
+                <div class="col-sm-12 currentslick">
+                    <div class="grid heightwrapper">
+                        <a href="https://shops.niwzi.be/essec-telecom-center/nl/essec-telecom-center-bree-1649" target="blank">
+                            <div class="image">
+                                <img alt="Essec team Bree"
+                                     class="img-responsive fototeam"
+                                     src="https://shoponsite.be/upload/files/2439/bree1.jpg">
+
+                                <div class="image-text desktop" style="min-height:270px;">
+                                    <h3 class="caption_title"><span style="font-size:34px;">Essec team</span> <br>
+                                        Bree</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="sidecontainer desktop">
+                            <div class="center">
+                                <div class="sidecontainer-markup">
+                                    <svg height="45" style="margin-top:10px;" viewBox="0 0 24 24" width="45"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                    <p class="caption_text caption_text__paal">Lokaal winkelen</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile mobile--markup container--wrapper">
+                            <div class="left--container flex--item">
+                                <h3 class="caption_title" style="margin: 0;">
+                                    <span style="font-size:34px;">Essec team</span>
+                                    Bree
+                                </h3>
+                            </div>
+
+                            <div class="right--container flex--item">
+                                <p>Lokaal winkelen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--MAASMECHELEN-->
+                <div class="col-sm-12 currentslick">
+                    <div class="grid heightwrapper">
+                        <a href="https://shops.niwzi.be/essec-telecom-center/nl/essec-telecom-center-maasmechelen-1650" target="blank">
+                            <div class="image">
+                                <img alt="Essec team Maasmechelen"
+                                     class="img-responsive fototeam"
+                                     src="https://shoponsite.be/upload/files/2439/maasmechelen5.jpg">
+
+                                <div class="image-text desktop" style="min-height:270px;">
+                                    <h3 class="caption_title"><span style="font-size:30px;">Essec team</span>
+                                        <br><p class="caption_title__maasmechelen" style="font-size: 20px;">Maasmechelen</p>
+                                    </h3>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="sidecontainer desktop">
+                            <div class="center">
+                                <div class="sidecontainer-markup">
+                                    <svg height="45" style="margin-top:10px;" viewBox="0 0 24 24" width="45"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                                    </svg>
+                                    <p class="caption_text caption_text__maasmechelen">Complete
+                                        winkelervaring</p>
+                                </div>
+                                <div class="sidecontainer-markup parking"
+                                     style="text-align: right; padding-right:20px;">
+                                    <svg height="24" viewBox="0 0 24 24" width="24"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    </svg>
+                                    <p class="fontsmall">Ruime parkeergelegenheid</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile mobile--markup container--wrapper">
+                            <div class="left--container flex--item">
+                                <h3 class="caption_title" style="margin: 0;">
+                                    <span style="font-size:34px;">Essec team</span>
+                                    <span style="font-size:30px; letter-spacing:-2px;">Maasmechelen</span>
+                                </h3>
+                            </div>
+                            <div class="middle--container flex--item">
+                                <svg height="24" viewBox="0 0 24 24" width="24"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                </svg>
+                                <p class="fontsmall" style="padding:10px;">Ruime parkeergelegenheid</p>
+                            </div>
+                            <div class="right--container flex--item">
+                                <p>Complete winkelervaring</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--    </div>&lt;!&ndash; /.carousel &ndash;&gt;-->
+<!--</div>-->
+
+
+<script>
+    $(document).ready(function () {
+        $('.carousel').slick({
+            slidesToShow: 1,
+            dots: true,
+            centerMode: false,
+            autoplay: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false,
+                    }
+                },
+
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>

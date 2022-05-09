@@ -1,0 +1,485 @@
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    #navigatie {
+        font-family: Hind, sans-serif;
+    }
+
+    .fontlarge {
+        font-size: 18px;
+    }
+
+    .button_winkeldetail {
+        background-color: #B0C4DE;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .button_winkeldetail:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeldetail a {
+        color: #353839 !important;
+    }
+
+    .button_winkeldetail a:hover {
+        font-weight: bold;
+    }
+
+    .iconwrapper {
+        text-align: center;
+    }
+
+    .full-wwidthhh {
+        left: 50%;
+        margin-left: -40vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+    @keyframes fadeAndScale {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        70% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_1 {
+        animation: fadeAndScale 1s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.2s;
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-2 {
+        animation: fadeAndScale 2s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-3 {
+        animation: fadeAndScale 4s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.4s;
+        transform-origin: center bottom;
+    }
+
+    @keyframes fadeAndScale2 {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_2 {
+        animation: fadeAndScale2 3s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .logowrapper {
+        display: none;
+    }
+
+    .logowrapper img {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        .margin-top {
+            margin-top: 65px;
+        }
+
+        .adres-wrapper {
+            padding-top: 60px;
+        }
+
+        .logo-wrapper {
+            padding-top: 35px;
+            padding-bottom: 40px;
+        }
+
+        /*.custom-content img {*/
+        /*    height: 100% !important;*/
+        /*}*/
+        .logowrapper {
+            margin-top: 50px;
+            display: block;
+        }
+
+        /*.full-width {*/
+        /*    margin-left: -40vw;*/
+        /*}*/
+    }
+
+
+    /*IMAGE DISPLAY*/
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto !important;
+    }
+
+    .gallery {
+        padding: 0 0 4rem 0;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 500px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .img-container:hover .img-content-hover {
+        display: block;
+    }
+
+    .imagerow {
+        margin-bottom: 25px;
+    }
+
+    .img_shops {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .img_shops:hover {
+        transform: scale(1.05);
+    }
+
+    .img-content-hover {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        display: none;
+        padding: 1rem;
+        background: #FFF;
+        font-weight: 400;
+        margin-top: 1.25rem;
+        margin-left: -2rem;
+    }
+
+    .title {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .category {
+        font-size: 1rem;
+    }
+
+    .img-content {
+        display: none;
+    }
+
+    .custom-content img {
+        height: inherit !important;
+    }
+
+
+    @supports (display: grid) {
+        .gallery .grid {
+            grid-gap: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .img_shops:hover {
+            transform: none;
+        }
+
+        .img-container {
+            height: 100%;
+        }
+
+        img-container:hover .img-content-hover {
+            display: none;
+        }
+
+
+        .img-content {
+            display: block;
+            padding: 1rem 0;
+        }
+
+        .img-container-wrapper {
+            height: 100%;
+        }
+    }
+
+
+    @media screen and (min-width: 991px) and (max-width: 1024px) {
+        .custom-content img {
+            height: initial !important;
+        }
+    }
+
+    /* BANNER AANBOD */
+    .bannercontent_p {
+        margin: 0 0 5px;
+    }
+
+    .bannercontent {
+        padding: 20px 0px 0px 30px;
+    }
+
+    .applebanner {
+        margin-bottom: 30px;
+    }
+
+    .weekdag {
+        text-transform: uppercase;
+    }
+
+    .tijdstip {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+
+    .daywrapper {
+        text-align: center;
+    }
+
+    .openingsuren_detail {
+        background: linear-gradient(90deg, rgba(227, 227, 235, 1) 0%, rgba(241, 246, 232, 1) 41%, rgba(205, 207, 208, 1) 100%);
+    }
+
+    /*h3::first-letter {*/
+    /*    font-size: 150%;*/
+    /*    color: #8A2BE2;*/
+    /*}*/
+
+    /*STRETCH CONTAINER OUT OF GRID*/
+    .full-width {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+</style>
+
+<section class="gallery fadeAndScale_effect_2">
+    <div class="container">
+        <h3>Onze vestigingen</h3>
+        <div class="grid">
+            <div class="row imagerow">
+                <!--3 kleine images-->
+                <!--PAAL-BERINGEN-->
+                <div class="column-xs-12 column-md-4 col-sm-4">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1636" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/paal.png" alt="Essec telecom center Paal-Beringen">
+                            <figcaption class="img-content">
+                                <h2 class="title">Schoebroekstraat 48</h2>
+                                <h3 class="category">Paal-Beringen</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                            <h2 class="title">Schoebroekstraat 48</h2>
+                            <h3 class="category">Paal-Beringen</h3>
+                        </span>
+                        </figure>
+                    </a>
+                </div>
+
+                <!--HASSELT-->
+                <div class="column-xs-12 column-md-4 col-sm-4">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1647" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/hasselt5.jpg" alt="Essec telecom center Hasselt">
+                            <figcaption class="img-content">
+                                <h2 class="title">Kempische Steenweg 89</h2>
+                                <h3 class="category">Hasselt</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                            <h2 class="title">Kempische Steenweg 89</h2>
+                            <h3 class="category">Hasselt</h3>
+                      </span>
+                        </figure>
+                    </a>
+                </div>
+
+                <!--GENK-->
+                <div class="column-xs-12 column-md-4 col-sm-4">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1645" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/genk.png" alt="Essec telecom center Genk">
+                            <figcaption class="img-content">
+                                <h2 class="title">Bochtlaan 4</h2>
+                                <h3 class="category">Genk</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">Bochtlaan 4</h2>
+                                <h3 class="category">Genk</h3>
+                            </span>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 1 breed gespreide image-->
+            <!--PELT-->
+            <div class="row imagerow">
+                <div class="column-xs-12 col-md-12 col-sm-12">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1648" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/pelt.png" alt="Essec telecom center Pelt">
+                            <figcaption class="img-content">
+                                <h2 class="title">De Koel 16A</h2>
+                                <h3 class="category">Pelt</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">De Koel 16A</h2>
+                                <h3 class="category">Pelt</h3>
+                            </span>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2 rechtstaande images-->
+            <!--MAASMECHELEN-->
+            <div class="row imagerow">
+                <div class="column-xs-12 column-md-6 col-sm-6">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1650" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/maasmechelen5.jpg" alt="Essec telecom center Maasmechelen">
+                            <figcaption class="img-content">
+                                <h2 class="title">Koninginnelaan 115</h2>
+                                <h3 class="category">Maasmechelen</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">Koninginnelaan 115</h2>
+                                <h3 class="category">Maasmechelen</h3>
+                            </span>
+                        </figure>
+                    </a>
+                </div>
+
+                <!--BREE-->
+                <div class="column-xs-12 column-md-6 col-sm-6">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1649" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/bree.png" alt="Essec telecom center Bree">
+                            <figcaption class="img-content">
+                                <h2 class="title">Markt 1</h2>
+                                <h3 class="category">Bree</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">Markt 1</h2>
+                                <h3 class="category">Bree</h3>
+                            </span>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- 1 breed gespreide image-->
+            <!--HEUSDEN-ZOLDER-->
+            <div class="row imagerow">
+                <div class="column-xs-12 col-md-12 col-sm-12">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1651" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/heusden.png" alt="Essec telecom center Heusden-Zolder">
+                            <figcaption class="img-content">
+                                <h2 class="title">Meylandtlaan 142</h2>
+                                <h3 class="category">Heusden-Zolder</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">Meylandtlaan 142</h2>
+                                <h3 class="category">Heusden-Zolder</h3>
+                            </span>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--MAPS + REVIEW-->
+<!--<div class="row fadeAndScale_effect_1-3" style="background-color: #CDDBD8">-->
+<!--    <div class="col-md-9">-->
+<!--        <style>-->
+<!--            #gmap&#45;&#45;iframe {-->
+<!--                width: 100%;-->
+<!--                min-height: 350px;-->
+<!--            }-->
+<!--        </style>-->
+
+<!--        <iframe id="gmap&#45;&#45;iframe" src="https://maps.google.com/maps?q=essec%20paal&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder=”0” style=”border:0” allowfullscreen></iframe>-->
+<!--    </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <div class="card-deck deck-active" style="padding: 20px">-->
+<!--                <div class="card">-->
+<!--                    <div class="card-body fontlarge margin-top" style="text-align: center;">-->
+<!--                        <p>Bent u tevreden over uw bezoek aan onze winkel?</p>-->
+<!--                        <p>Laat dan zeker een review achter op onze pagina! <a href="https://www.google.com/search?hl=nl-BE&gl=be&q=Proximus+Shop+Paal,+Schoebroekstraat+48,+3583+Beringen&ludocid=12313470319180405400&lsig=AB86z5W0N2nxlrtsUgsYQG3XcLLb#lrd=0x47c13b609cb7cfe1:0xaae23c0407105a98,3" target="blank" style="font-weight: bold;">Klik hier</a> om een review toe te voegen.</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--</div>-->
+
+
+<script>
+    const imgContent = document.querySelectorAll('.img-content-hover');
+
+    function showImgContent(e) {
+        for (var i = 0; i < imgContent.length; i++) {
+            x = e.pageX;
+            y = e.pageY;
+            imgContent[i].style.transform = `translate3d(60px, 50px, 0)`;
+        }
+    }
+
+    document.addEventListener('mousemove', showImgContent);
+</script>
+

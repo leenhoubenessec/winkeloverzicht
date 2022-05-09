@@ -1,0 +1,913 @@
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    #navigatie {
+        font-family: Hind, sans-serif;
+    }
+
+    .fontlarge {
+        font-size: 18px;
+    }
+
+    .button_winkeldetail {
+        background-color: #B0C4DE;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .button_winkeldetail:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeldetail a {
+        color: #353839 !important;
+    }
+
+    .button_winkeldetail a:hover {
+        font-weight: bold;
+    }
+
+    .iconwrapper {
+        text-align: center;
+    }
+
+    .full-wwidthhh {
+        left: 50%;
+        margin-left: -40vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+    @keyframes fadeAndScale {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        70% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_1 {
+        animation: fadeAndScale 1s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.2s;
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-2 {
+        animation: fadeAndScale 2s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .fadeAndScale_effect_1-3 {
+        animation: fadeAndScale 4s cubic-bezier(.39, -1.05, .58, 1.95);
+        animation-delay: -0.4s;
+        transform-origin: center bottom;
+    }
+
+    @keyframes fadeAndScale2 {
+        0% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        40% {
+            opacity: 0;
+            transform: scale3d(.75, .75, 1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale3d(1, 1, 1);
+        }
+    }
+
+    .fadeAndScale_effect_2 {
+        animation: fadeAndScale2 3s cubic-bezier(.39, -1.05, .58, 1.95);
+        transform-origin: center bottom;
+    }
+
+    .logowrapper {
+        display: none;
+    }
+
+    .logowrapper img {
+        width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        .margin-top {
+            margin-top: 65px;
+        }
+
+        .adres-wrapper {
+            padding-top: 60px;
+        }
+
+        .logo-wrapper {
+            padding-top: 35px;
+            padding-bottom: 40px;
+        }
+
+        /*.custom-content img {*/
+        /*    height: 100% !important;*/
+        /*}*/
+
+        .logowrapper {
+            margin-top: 50px;
+            display: block;
+        }
+
+        /*.full-width {*/
+        /*    margin-left: -40vw;*/
+        /*}*/
+    }
+
+
+    /*IMAGE DISPLAY*/
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: auto !important;
+    }
+
+    .gallery {
+        padding: 0 0 4rem 0;
+    }
+
+    .img-container {
+        width: 100%;
+        height: 500px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .img-container:hover .img-content-hover {
+        display: block;
+    }
+
+    .imagerow {
+        margin-bottom: 25px;
+    }
+
+    .img_shops {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transform: scale(1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .img_shops:hover {
+        transform: scale(1.05);
+    }
+
+    .img-content-hover {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        display: none;
+        padding: 1rem;
+        background: #FFF;
+        font-weight: 400;
+        margin-top: 1.25rem;
+        margin-left: -2rem;
+    }
+
+    .title {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .category {
+        font-size: 1rem;
+    }
+
+    .img-content {
+        display: none;
+    }
+
+    .custom-content img {
+        height: inherit !important;
+    }
+
+
+
+
+    @supports (display: grid) {
+        .gallery .grid {
+            grid-gap: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .img_shops:hover {
+            transform: none;
+        }
+
+        .img-container {
+            height: 100%;
+        }
+
+        img-container:hover .img-content-hover {
+            display: none;
+        }
+
+
+        .img-content {
+            display: block;
+            padding: 1rem 0;
+        }
+
+        .img-container-wrapper {
+            height: 100%;
+        }
+    }
+
+
+    @media screen and (min-width: 991px) and (max-width: 1024px) {
+        .custom-content img {
+            height: initial !important;
+        }
+    }
+
+    /* BANNER AANBOD */
+    .bannercontent_p {
+        margin: 0 0 5px;
+    }
+
+    .bannercontent {
+        padding: 20px 0px 0px 30px;
+    }
+
+    .applebanner {
+        margin-bottom: 30px;
+    }
+
+    .weekdag {
+        text-transform: uppercase;
+    }
+
+    .tijdstip {
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+
+    .daywrapper {
+        text-align: center;
+    }
+
+    /*.openingsuren_detail {*/
+    /*    background: linear-gradient(90deg, rgba(227,227,235,1) 0%, rgba(241,246,232,1) 41%, rgba(205,207,208,1) 100%);*/
+    /*}*/
+
+    /*h3::first-letter {*/
+    /*    font-size: 150%;*/
+    /*    color: #8A2BE2;*/
+    /*}*/
+
+    /*STRETCH CONTAINER OUT OF GRID*/
+    .full-width {
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        max-width: 100vw;
+        position: relative;
+        right: 50%;
+        width: 100vw;
+    }
+
+
+    /*ESSECSLIDER*/
+    .fontlarge {
+        font-size: 18px;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .carousel {
+        width: 90%;
+        margin: 0px auto;
+    }
+
+    .slick-slide {
+        margin: 10px;
+    }
+
+    .slick-slide img {
+        width: 100%;
+        border: 2px solid #fff;
+    }
+
+    .wrapper .slick-dots li button:before {
+        font-size: 20px;
+        color: white;
+    }
+
+    .locatie-titel {
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .card-body {
+        font-size: 14px;
+        margin: 0 10px;
+        text-align: left;
+        background-color: #FFF;
+        padding: 22px 10px 10px;
+        border-radius: 0px 0px 7px 7px;
+    }
+
+    .card-body p {
+        color: #6e6e73;
+    }
+
+    .button_winkeloverzicht {
+        background-color: #DCDCDC;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .button_winkeloverzicht a {
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht:hover {
+        background-color: #E1EBEE;
+        color: #353839 !important;
+    }
+
+    .button_winkeloverzicht a:hover {
+        font-weight: bold;
+    }
+
+    .image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    figure {
+        overflow: hidden;
+        margin: 0 10px;
+    }
+
+    .image #zoom-in img {
+        transform: scale(1);
+        transition: 0.3s ease-in-out;
+    }
+
+    .image #zoom-in:hover img {
+        transform: scale(1.3);
+    }
+
+    @media screen and (min-width: 1200px) {
+        .locatie-titel {
+            font-size: 16px;
+        }
+
+    }
+
+    .flex--item {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>
+
+<section class="openingsuren_detail full-width fadeAndScale_effect_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-12" style="margin-bottom: 30px;">
+                <h3 style="text-align: center; text-transform: uppercase;">Openingsuren Essec Telecom center Genk</h3>
+                <p style="text-align: center; margin-bottom:30px;">Bochtlaan 4 3600 Genk</p>
+                <div class="col-sm-6 col-md-6 daywrapper">
+                    <p class="tijdstip">9<span style="font-weight:300;">u</span>00 - 18<span style="font-weight:300;">u</span>00</p>
+                    <p class="weekdag"> MA - VR </p>
+                </div>
+                <div class="col-sm-6 col-md-6 daywrapper" >
+                    <p class="tijdstip">10<span style="font-weight:300;">u</span>00 - 18<span style="font-weight:300;">u</span>00</p>
+                    <p class="weekdag"> ZA </p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 daywrapper">
+                <p class="weekdag" style="margin-bottom:30px;">Zondag gesloten</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--MAPS + REVIEW-->
+<div class="row fadeAndScale_effect_1-2 full-width">
+    <div class="col-md-9">
+        <style>
+            #gmap--iframe {
+                width: 100%;
+                min-height: 350px;
+            }
+        </style>
+
+        <iframe id="gmap--iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2512.6834959699136!2d5.500102215614435!3d50.966555779549914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0ded32fde19e7%3A0x879cd605f0dff111!2sProximus%20Shop%20Genk!5e0!3m2!1snl!2sbe!4v1649166237805!5m2!1snl!2sbe" frameborder=”0” style=”border:0” allowfullscreen></iframe>
+    </div>
+    <div class="col-md-3">
+        <div class="card-deck deck-active" style="padding: 20px">
+            <div class="card">
+                <div class="card-body fontlarge margin-top" style="text-align: center;">
+                    <p>Bent u tevreden over uw bezoek aan onze winkel?</p>
+                    <p>Laat dan zeker een review achter op onze pagina! <a href="https://www.google.com/search?q=Proximus+Shop+Genk&hl=nl-BE&gl=be&ei=M0hMYpSCO6fosAeqsoPgCQ&ved=0ahUKEwjU5-vFh_32AhUnNOwKHSrZAJwQ4dUDCA4&uact=5&oq=Proximus+Shop+Genk&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgsILhCABBDHARCvATIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjIGCAAQFhAeMgIIJjoHCAAQRxCwA0oECEEYAEoECEYYAFDZC1ijFmCbG2gBcAF4AIABeogB-QKSAQMzLjGYAQCgAQHIAQjAAQE&sclient=gws-wiz#lrd=0x47c0ded34989cead:0x7ade0d016391be6c,3,,,"  target="_blank" style="font-weight: bold;">Klik hier</a> om een review toe te voegen.</p>
+                </div>
+                <div class="middle--container flex--item" style="align-items:baseline;">
+                    <svg height="24" viewBox="0 0 24 24" width="24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.688 4.176c0 .82-.603 1.109-1.423 1.109h-.509v-2.178h.704c.775 0 1.228.283 1.228 1.069zm4.312-1.884v6.417c0 1.265-1.026 2.291-2.292 2.291h-6.417c-1.265 0-2.291-1.026-2.291-2.292v-6.416c0-1.266 1.026-2.292 2.292-2.292h6.417c1.265 0 2.291 1.026 2.291 2.292zm-2.75 1.829c0-.759-.231-1.33-.691-1.713-.461-.383-1.134-.574-2.019-.574h-2.331v7.333h1.547v-2.609h.664c.905 0 1.603-.209 2.094-.627.49-.418.736-1.021.736-1.81zm-18.548 5.879h-2.202c-.276 0-.5.224-.5.5v.511c0 .793.926.989 1.616.989l1.086-2zm19.08 2.993l-.074.007h-6.417c-5.448 0-8.12-.359-10.233-1.027 0 0 .74-1.826 1.631-3.142.202-.298.515-.502.869-.566 1.186-.213 2.261-.31 3.442-.343v-1.908c-1.432.03-2.601.127-3.851.351-1.016.182-1.45.507-2.278 1.889-1.078 1.799-2.101 3.715-2.929 5.252-.639 1.186-.946 2.252-.946 3.666 0 1.37.397 2.533 1.005 3.981v1.847c0 .552.448 1 1 1h1.5c.552 0 1-.448 1-1v-1h13v1c0 .552.448 1 1 1h1.499c.552 0 1-.448 1-1v-1.847c.608-1.448 1.005-2.611 1.005-3.981 0-1.414-.307-2.48-.946-3.666l-.277-.513zm-17.282 5.007c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11 0h-7c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7c.276 0 .5.224.5.5s-.224.5-.5.5zm4 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                    </svg>
+                    <p class="fontsmall" style="padding:10px;">Ruime parkeergelegenheid</p>
+                </div>
+                <div class="middle--container flex--item" style="display:block; text-align:right; font-family:'Poppins', sans-serif; padding-right: 15px;">
+                    <p class="fontsmall"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M8.26 1.289l-1.564.772c-5.793 3.02 2.798 20.944 9.31 20.944.46 0 .904-.094 1.317-.284l1.542-.755-2.898-5.594-1.54.754c-.181.087-.384.134-.597.134-2.561 0-6.841-8.204-4.241-9.596l1.546-.763-2.875-5.612zm7.746 22.711c-5.68 0-12.221-11.114-12.221-17.832 0-2.419.833-4.146 2.457-4.992l2.382-1.176 3.857 7.347-2.437 1.201c-1.439.772 2.409 8.424 3.956 7.68l2.399-1.179 3.816 7.36s-2.36 1.162-2.476 1.215c-.547.251-1.129.376-1.733.376"/></svg><a href="tel:003289323490"> +32 89 32 34 90</a></p>
+                    <p class="fontsmall"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 13v1h2v-1h-2zm2-1v-1h-2v1h2zm1 1v1h2v-1h-2zm2-1v-1h-2v1h2zm1 1v1h2v-1h-2zm2-1v-1h-2v1h2zm3-5h-14v3h14v-3zm-3 11h-8v1h8v-1zm-2 2h-6v1h6v-1zm6-17v-3h-16v3h-3v17h3v4h11.73c1.248 0 3.437-2.604 4.041-4h3.229v-17h-3zm-15-2h14v2h-14v-2zm14 17.771c0 1.418-1.943 1.717-2.62 1.531.453.813.276 2.698-1.109 2.698h-10.271v-6h14v1.771zm2-3.771h-18v-10h18v10z"/></svg> +32 89 32 34 91</p>
+                    <p class="fontsmall"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M11.99 0l-11.99 8.723v15.277h24v-15.277l-12.01-8.723zm.001 2.472l9.793 7.113-6.735 4.588-3.049-2.47-3.049 2.471-6.737-4.589 9.777-7.113zm-9.991 9.386l5.329 3.63-5.329 4.318v-7.948zm.474 10.142l9.526-7.723 9.526 7.723h-19.052zm19.526-2.194l-5.329-4.317 5.329-3.631v7.948z"/></svg><a href="mailto:genk@essec.be"> Email</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<section class="gallery fadeAndScale_effect_2">
+    <div class="container">
+        <h3 style="margin-bottom:30px; text-align: center;">Neem een kijkje in onze winkel</h3>
+        <div class="grid">
+            <!-- 1 breed gespreide image-->
+            <div class="row imagerow">
+                <div class="column-xs-12 col-md-12 col-sm-12">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl" target="Essec Telecom Center Webshop">
+                        <figure class="img-container">
+                            <img class="img_shops" src="https://shoponsite.be/upload/files/2439/genk5.jpg" alt="Essec Telecom Center Genk">
+                            <figcaption class="img-content">
+                                <h2 class="title">Essec Telecom Center</h2>
+                                <h3 class="category">Genk</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">Essec Telecom Center</h2>
+                                <h3 class="category">Genk</h3>
+                          </span>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- 2 rechtstaande images-->
+            <div class="row imagerow">
+                <div class="column-xs-12 column-md-6 col-sm-6">
+                    <a href="https://proximus.essecshop.be/" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="https://shoponsite.be/upload/files/2439/genk1.jpg" alt="Proximus Telefonie en Televisie">
+                            <figcaption class="img-content">
+                                <h2 class="title">Telefonie & Televisie</h2>
+                                <h3 class="category">Proximus</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">Telefonie & Televisie</h2>
+                                <h3 class="category">Proximus</h3>
+                            </span>
+                        </figure>
+                    </a>
+                </div>
+                <div class="column-xs-12 column-md-6 col-sm-6">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/producten/m2669-c512/samsung/smartphone" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="http://www.shoponsite.be/upload/files/2439/genk2.jpg" alt="Samsung S22 Series">
+                            <figcaption class="img-content">
+                                <h2 class="title">S22 Series</h2>
+                                <h3 class="category">Samsung</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">S22 Series</h2>
+                                <h3 class="category">Samsung</h3>
+                            </span>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- 1 breed gespreide image-->
+            <div class="row imagerow">
+                <div class="column-xs-12 col-md-12 col-sm-12">
+                    <a href="https://shops.niwzi.be/essec-telecom-center/nl/search?s=galaxy+buds" target="blank">
+                        <figure class="img-container">
+                            <img class="img_shops" src="https://shoponsite.be/upload/files/2439/genk3.jpg" alt="Samsung gamma galaxy buds+">
+                            <figcaption class="img-content">
+                                <h2 class="title">Galaxy Buds+</h2>
+                                <h3 class="category">Samsung</h3>
+                            </figcaption>
+                            <span class="img-content-hover">
+                                <h2 class="title">Galaxy Buds+</h2>
+                                <h3 class="category">Samsung</h3>
+                          </span>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Background image -->
+<div class="container applebanner fadeAndScale_effect_1-3">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="bg-image" style="background-image: url('http://www.shoponsite.be/upload/files/2439/applewatchbanner.jpg'); height: 394px; background-size: cover;">
+                <div class="container bannercontent">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-12">
+                            <h3>U kan bij ons terecht voor:</h3>
+                            <p class="bannercontent_p">Officiële Proximus partner</p>
+                            <p class="bannercontent_p">Mobiele telefonie</p>
+                            <p class="bannercontent_p">Vaste telefonie</p>
+                            <p class="bannercontent_p">Internet & televisie</p>
+                            <p class="bannercontent_p">tablets</p>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 logowrapper">
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/applereseller.png" alt="Apple authorised reseller">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/oppo.png" alt="Oppo">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/xiaomi.png" alt="Xiaomi">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/Samsung_Orig_Wordmark_BLACK_RGB.png" alt="Samsung">
+                            </div>
+                            <div class="logo-image col-sm-2">
+                                <img src="http://www.shoponsite.be/upload/files/2439/proximuslogo.png" alt="Proximus">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--SLIDER-->
+<div class="wrapper">
+    <h2>Essec Telecom Center</h2>
+    <div class="carousel">
+
+        <!--FIRST BATCH OF 3 SLIDES-->
+        <div class="card-deck deck-active winkel_locatie">
+            <!--PAAL BERINGEN-->
+            <div class="card">
+                <div class="image">
+                    <div id="zoom-in">
+                        <figure>
+                            <img alt="Essec Paal" class="card-img-top"
+                                 src="https://www.shoponsite.be/upload/files/2439/paal.png"
+                                 style="width:340px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h4 class="locatie-titel"><a
+                            href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1636"
+                            target="blank">Essec Telecom Center Paal-Beringen</a></h4>
+                    <div class="p-wrapper">
+                        <p><a href="https://g.page/EssecPaal?share" target="blank">Schoebroekstraat
+                            48</a></p>
+                        <p><a href="https://g.page/EssecPaal?share" target="blank">3583
+                            Paal-Beringen</a></p>
+                        <p><a href="tel:003211450460" style="text-underline:none;">011 45 04
+                            60</a></p>
+                        <button class="btn btn-rounded button_winkeloverzicht"
+                                style="border:none; border-radius:10px;"
+                                type="button">
+                            <a class="fontlarge"
+                               href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1636" target="blank">Meer
+                                informatie</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--HASSELT-->
+        <div class="card">
+            <div class="image">
+                <div id="zoom-in">
+                    <figure>
+                        <img alt="Essec Hasselt" class="card-img-top"
+                             src="http://www.shoponsite.be/upload/files/2439/hasselt.png"
+                             style="width:350px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h4 class="locatie-titel"><a
+                        href="https://google.com">Essec Telecom Center Hasselt</a>
+                </h4>
+                <p><a href="https://goo.gl/maps/GieqNbf44UQwueGo7" target="blank">Kempische
+                    Steenweg 89</a></p>
+                <p><a href="https://goo.gl/maps/GieqNbf44UQwueGo7" target="blank">3500
+                    Hasselt</a></p>
+                <p><a href="tel:003211232261" style="text-underline:none;">011 23 22
+                    61</a></p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge" href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1647" target="blank">Meer
+                        informatie</a>
+                </button>
+            </div>
+        </div>
+
+        <!--GENK-->
+        <div class="card">
+            <div class="image">
+                <div id="zoom-in">
+                    <figure>
+                        <img alt="Essec Genk" class="card-img-top"
+                             src="http://www.shoponsite.be/upload/files/2439/genk.png"
+                             style="width:350px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h4 class="locatie-titel"><a
+                        href="https://google.com" target="blank">Essec Telecom
+                    Center Genk</a></h4>
+                <p><a href="https://goo.gl/maps/HBAZ4YQJWw1VDgLt7" target="blank">Bochtlaan
+                    4</a></p>
+                <p><a href="https://goo.gl/maps/HBAZ4YQJWw1VDgLt7" target="blank">3600
+                    Genk</a></p>
+                <p><a href="tel:003289323490" style="text-underline:none;">089 32 34
+                    90</a></p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge" href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1645" target="blank">Meer
+                        informatie</a>
+                </button>
+            </div>
+        </div>
+
+        <!--SECOND BATCH OF 3 SLIDES-->
+        <!--PELT-->
+        <div class="card">
+            <div class="image">
+                <div id="zoom-in">
+                    <figure>
+                        <img alt="Essec Pelt"
+                             class="card-img-top"
+                             src="https://shoponsite.be/upload/files/2439/pelt6.jpg"
+                             style="width:340px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h4 class="locatie-titel"><a
+                        href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1636"
+                        target="blank">Essec Telecom Center Pelt</a></h4>
+                <p><a href="https://g.page/EssecPelt?share" target="blank">De Koel 16A</a></p>
+                <p><a href="https://g.page/EssecPelt?share" target="blank">3910 Pelt</a></p>
+                <p><a href="tel:003211809494" style="text-underline:none;">011 80 94 94</a></p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge"
+                       href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1648" target="blank">Meer
+                        informatie</a>
+                </button>
+            </div>
+        </div>
+
+        <!--HEUSDEN-ZOLDER-->
+        <div class="card">
+            <div class="image">
+                <div id="zoom-in">
+                    <figure>
+                        <img alt="Essec Heusden-Zolder" class="card-img-top"
+                             src="http://www.shoponsite.be/upload/files/2439/heusden.png"
+                             style="width:350px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h4 class="locatie-titel"><a href="https://google.com">Essec Telecom Center
+                    Heusden-Zolder</a>
+                </h4>
+                <p><a href="https://goo.gl/maps/E2G7tcANDWXh7dsKA" target="blank">Meylandtlaan 142</a>
+                </p>
+                <p><a href="https://goo.gl/maps/E2G7tcANDWXh7dsKA" target="blank">3550
+                    Heusden-Zolder</a></p>
+                <p><a href="tel:003211547212" style="text-underline:none;">011 54 72 12</a></p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge" href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1651" target="blank">Meer
+                        informatie</a>
+                </button>
+            </div>
+        </div>
+
+        <!--BREE-->
+        <div class="card">
+            <div class="image">
+                <div id="zoom-in">
+                    <figure>
+                        <img alt="Essec Bree" class="card-img-top"
+                             src="http://www.shoponsite.be/upload/files/2439/bree.png"
+                             style="width:350px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h4 class="locatie-titel"><a
+                        href="https://google.com" target="blank">Essec Telecom Center Bree</a></h4>
+                <p><a href="https://goo.gl/maps/DZnq88CWB6jRFmHe7" target="blank">Markt 1</a></p>
+                <p><a href="https://goo.gl/maps/DZnq88CWB6jRFmHe7" target="blank">3960 Bree</a></p>
+                <p><a href="tel:003289704988" style="text-underline:none;">089 70 49 88</a></p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge" href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1649" target="blank">Meer
+                        informatie</a>
+                </button>
+            </div>
+        </div>
+
+        <!-- THIRD BATCH OF 2 SLIDES-->
+        <!--MAASMECHELEN-->
+        <div class="card">
+            <div class="image">
+                <div id="zoom-in">
+                    <figure>
+                        <img alt="Essec Maasmechelen"
+                             class="card-img-top"
+                             src="https://shoponsite.be/upload/files/2439/maasmechelen5.jpg"
+                             style="width:340px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h4 class="locatie-titel"><a
+                        href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1636"
+                        target="blank">Essec Telecom Center Maasmechelen</a></h4>
+                <p><a href="https://goo.gl/maps/RK9vbRymQuqZdcrD8" target="blank">Koninginnelaan 115</a>
+                </p>
+                <p><a href="https://goo.gl/maps/RK9vbRymQuqZdcrD8" target="blank">3630 Maasmechelen</a>
+                </p>
+                <p><a href="tel:003289703915" style="text-underline:none;">089 70 39 15</a></p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge"
+                       href="https://shops.niwzi.be/essec-telecom-center/nl/custom/1650" target="blank">Meer
+                        informatie</a>
+                </button>
+            </div>
+        </div>
+
+        <!--WEBSHOP-->
+        <div class="card">
+            <div class="image">
+                <div id="zoom-in">
+                    <figure>
+                        <img alt="Essec Webshop" class="card-img-top"
+                             src="http://www.shoponsite.be/upload/files/2439/Webshop.jpg"
+                             style="width:350px; max-height:200px; box-shadow: 5px 5px 15px 5px #E8E8E8; border-radius: 7px 7px 0px 0px;"/>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <h4 class="locatie-titel"><a href="https://google.com">Essec Telecom Center Webshop</a>
+                </h4>
+                <p><a href="https://g.page/EssecPaal?share" target="blank">Schoebroekstraat
+                    48</a></p>
+                <p><a href="https://g.page/EssecPaal?share" target="blank">3583
+                    Paal-Beringen</a></p>
+                <p><a href="tel:003211450460" style="text-underline:none;">011 45 04
+                    60</a></p>
+                <button class="btn btn-rounded button_winkeloverzicht"
+                        style="border:none; border-radius:10px;"
+                        type="button">
+                    <a class="fontlarge" href="https://shops.niwzi.be/essec-telecom-center/nl" target="blank">Meer
+                        informatie</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const imgContent = document.querySelectorAll('.img-content-hover');
+
+    function showImgContent(e) {
+        for (var i = 0; i < imgContent.length; i++) {
+            x = e.pageX;
+            y = e.pageY;
+            imgContent[i].style.transform = `translate3d(60px, 50px, 0)`;
+        }
+    }
+
+    document.addEventListener('mousemove', showImgContent);
+</script>
+
+<script>
+    $(document).ready(function () {
+        $('.carousel').slick({
+            slidesToShow: 3,
+            dots: true,
+            centerMode: false,
+            autoplay: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        centerMode: false,
+                    }
+                },
+
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
